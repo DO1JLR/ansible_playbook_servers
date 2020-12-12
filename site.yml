@@ -1,0 +1,9 @@
+---
+
+- name: roles for all hosts
+  hosts: all
+  roles:
+    - { role: base, tags: [default,packages,base]}
+    - { role: ranger, tags: [packages,ranger]}
+    - { role: bat, tags: [packages,bat], when: [ansible_os_family == 'Debian']}
+    - { role: dotfiles, tags: [default,dotfiles]}
