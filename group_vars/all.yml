@@ -1,0 +1,10 @@
+---
+admins:
+  - l3d
+
+users:
+  l3d:
+    https://github.com/do1jlr.keys
+
+accounts:
+  - l3d
