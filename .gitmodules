@@ -10,3 +10,12 @@
 [submodule "roles/dotfiles"]
 	path = roles/dotfiles
 	url = https://github.com/chaos-bodensee/role_dotfiles.git
+[submodule "roles/users"]
+	path = roles/users
+	url = https://github.com/chaos-bodensee/role-manage_users.git
+[submodule "roles/ssh_auth"]
+	path = roles/ssh_auth
+	url = https://github.com/chaos-bodensee/role-ssh_authorized_keys.git
+[submodule "roles/sshd"]
+	path = roles/sshd
+	url = https://github.com/chaos-bodensee/role_sshd.git
