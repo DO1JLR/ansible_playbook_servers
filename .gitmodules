@@ -19,3 +19,6 @@
 [submodule "roles/sshd"]
 	path = roles/sshd
 	url = https://github.com/chaos-bodensee/role_sshd.git
+[submodule "files/ssh_public_keys"]
+	path = files/ssh_public_keys
+	url = https://gitea.see-base.de/toolbox/ssh-public-keys.git

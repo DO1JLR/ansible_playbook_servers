@@ -1,9 +1,16 @@
 ---
 
-- name: roles for all hosts
+- name: general roles for all hosts
   hosts: all
   roles:
     - { role: base, tags: [default,packages,base]}
     - { role: ranger, tags: [packages,ranger]}
     - { role: bat, tags: [packages,bat], when: [ansible_os_family == 'Debian']}
+
+- name: user specific roles for all hosts
+  hosts: all
+  roles:
+    - { role: users, tags: [default,users]}
     - { role: dotfiles, tags: [default,dotfiles]}
+    - { role: ssh_auth, tags: [default,users]}
+    - { role: sshd, tags: [default,users]}

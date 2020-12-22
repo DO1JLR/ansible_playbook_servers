@@ -4,7 +4,14 @@ admins:
 
 users:
   l3d:
-    https://github.com/do1jlr.keys
+    - l3d@pinkie.l3d.yt
+    - l3d@mobile.l3d.yt
+    - l3d@backup.l3d.yt
+    - l3d@derpy.l3d.yt
+    - l3d@backup-rsa.l3d.yt
+    - l3d@business.wingcon.com
+
+#    https://github.com/do1jlr.keys
 
 accounts:
   - l3d
