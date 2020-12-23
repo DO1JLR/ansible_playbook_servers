@@ -19,5 +19,6 @@
   hosts: web
   roles:
     - { role: webhost2, tags: [web,webhost]}
+    - { role: acmetool_fix, tags: [web,acmetool]}
     - { role: acmetool2, tags: [web,acmetool]}
     - { role: nginx2, tags: [web,nginx]}
