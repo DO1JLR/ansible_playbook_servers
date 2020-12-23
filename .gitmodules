@@ -22,3 +22,12 @@
 [submodule "files/ssh_public_keys"]
 	path = files/ssh_public_keys
 	url = https://gitea.see-base.de/toolbox/ssh-public-keys.git
+[submodule "roles/nginx2"]
+	path = roles/nginx2
+	url = git@git.ccczh.ch:ansible-roles/role-nginx_new2.git
+[submodule "roles/acmetool2"]
+	path = roles/acmetool2
+	url = git@git.ccczh.ch:ansible-roles/role-acmetool.git
+[submodule "roles/webhost2"]
+	path = roles/webhost2
+	url = git@git.ccczh.ch:ansible-roles/role-webhost.git

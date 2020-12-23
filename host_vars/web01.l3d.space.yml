@@ -1,0 +1,28 @@
+---
+users:
+  l3d:
+    - l3d@pinkie.l3d.yt
+    - l3d@mobile.l3d.yt
+    - l3d@backup.l3d.yt
+    - l3d@derpy.l3d.yt
+    - l3d@backup-rsa.l3d.yt
+    - l3d@business.wingcon.com
+  webwaffel:
+    - l3d@pinkie.l3d.yt
+    - l3d@mobile.l3d.yt
+    - l3d@backup.l3d.yt
+    - l3d@derpy.l3d.yt
+    - l3d@backup-rsa.l3d.yt
+    - l3d@business.wingcon.com
+
+
+accounts:
+  - l3d
+  - webwaffel
+
+nginx_sites:
+  - name: 'c3woc.org'
+    webroot:
+      user: 'webwaffel'
+
+acme_notification_email: "acme_{{ ansible_hosts }}@l3d.yt"
