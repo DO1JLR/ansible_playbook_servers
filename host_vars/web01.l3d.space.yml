@@ -25,4 +25,4 @@ nginx_sites:
     webroot:
       user: 'webwaffel'
 
-acme_notification_email: "acme_{{ ansible_hosts }}@l3d.yt"
+acme_notification_email: "acme_{{ inventory_hostname }}@l3d.yt"

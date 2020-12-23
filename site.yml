@@ -18,6 +18,6 @@
 - name: deploy web config
   hosts: web
   roles:
+    - { role: webhost2, tags: [web,webhost]}
     - { role: acmetool2, tags: [web,acmetool]}
     - { role: nginx2, tags: [web,nginx]}
-    - { role: webhost2, tags: [web,webhost]}
