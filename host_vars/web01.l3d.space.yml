@@ -27,6 +27,8 @@ nginx_sites:
   - name: 'www.c3woc.org'
   - name: 'c3woc.eu'
   - name: 'www.c3woc.eu'
+  - name: 'c3woc.cn'
+  - name: 'www.c3woc.cn'
 
 
 acme_notification_email: "acme_{{ inventory_hostname }}@l3d.yt"
