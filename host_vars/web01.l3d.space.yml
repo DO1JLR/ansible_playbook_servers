@@ -25,6 +25,8 @@ nginx_sites:
     webroot:
       user: 'webwaffel'
   - name: 'www.c3woc.org'
+  - name: 'c3woc.eu'
+  - name: 'www.c3woc.eu'
 
 
 acme_notification_email: "acme_{{ inventory_hostname }}@l3d.yt"
