@@ -21,9 +21,11 @@ accounts:
   - webwaffel
 
 nginx_sites:
-  - name: 'c3woc.org'
+  - name: 'c3woc.de'
     webroot:
       user: 'webwaffel'
+  - name: 'www.c3woc.de'
+  - name: 'c3woc.org'
   - name: 'www.c3woc.org'
   - name: 'c3woc.eu'
   - name: 'www.c3woc.eu'
