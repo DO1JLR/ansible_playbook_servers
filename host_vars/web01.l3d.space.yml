@@ -37,7 +37,6 @@ acme_notification_email: "acme_{{ inventory_hostname }}@l3d.yt"
 # firewall
 firewall_allowed_tcp_ports:
   - "22"
-  - "25"
   - "80"
   - "443"
 fail2ban_destemail: "fail2ban_notify_{{ inventory_hostname }}@l3d.yt"
