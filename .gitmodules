@@ -34,3 +34,9 @@
 [submodule "roles/goaccess"]
 	path = roles/goaccess
 	url = https://github.com/roles-ansible/ansible_role_goaccess.git
+[submodule "roles/geerlingguy.firewall"]
+	path = roles/geerlingguy.firewall
+	url = https://github.com/geerlingguy/ansible-role-firewall.git
+[submodule "roles/robertdebock.fail2ban"]
+	path = roles/robertdebock.fail2ban
+	url = https://github.com/robertdebock/ansible-role-fail2ban.git
