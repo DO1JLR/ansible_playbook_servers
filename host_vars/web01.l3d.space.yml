@@ -47,6 +47,12 @@ nginx_sites:
   - name: 'podcast.c3woc.de'
     webroot:
       user: 'webwaffelpodcast'
+  - name: 'www.podcast.c3woc.de'
+  - name: 'podcast.c3woc.org'
+  - name: 'www.podcast.c3woc.org'
+  - name: 'podcast.c3vvoc.de'
+  - name: 'www.podcast.c3vvoc.de'
+
 
 acme_notification_email: "acme_{{ inventory_hostname }}@l3d.yt"
 
