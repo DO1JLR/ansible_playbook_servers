@@ -31,6 +31,11 @@ nginx_sites:
   - name: 'www.c3woc.eu'
   - name: 'c3woc.cn'
   - name: 'www.c3woc.cn'
+  - name: 'l3d.space'
+  - name: 'www.l3d.space'
+  - name: 'ansible.l3d.space'
+  - name: 'www.ansible.l3d.space'
+
 
 acme_notification_email: "acme_{{ inventory_hostname }}@l3d.yt"
 
