@@ -14,11 +14,20 @@ users:
     - l3d@derpy.l3d.yt
     - l3d@backup-rsa.l3d.yt
     - l3d@business.wingcon.com
+  webwaffelpodcast:
+    - l3d@pinkie.l3d.yt
+    - l3d@mobile.l3d.yt
+    - l3d@backup.l3d.yt
+    - l3d@derpy.l3d.yt
+    - l3d@backup-rsa.l3d.yt
+    - l3d@business.wingcon.com
+
 
 
 accounts:
   - l3d
   - webwaffel
+  - webwaffelpodcast
 
 nginx_sites:
   - name: 'c3woc.de'
@@ -35,7 +44,9 @@ nginx_sites:
   - name: 'www.l3d.space'
   - name: 'ansible.l3d.space'
   - name: 'www.ansible.l3d.space'
-
+  - name: 'podcast.c3woc.de'
+    webroot:
+      user: 'webwaffelpodcast'
 
 acme_notification_email: "acme_{{ inventory_hostname }}@l3d.yt"
 
