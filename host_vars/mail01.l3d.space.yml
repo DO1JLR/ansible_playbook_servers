@@ -7,12 +7,28 @@ users:
     - l3d@derpy.l3d.yt
     - l3d@backup-rsa.l3d.yt
     - l3d@business.wingcon.com
+  mailwebuser:
+    - l3d@pinkie.l3d.yt
+    - l3d@mobile.l3d.yt
+    - l3d@backup.l3d.yt
+    - l3d@derpy.l3d.yt
+    - l3d@backup-rsa.l3d.yt
+    - l3d@business.wingcon.com
 
 accounts:
   - l3d
+  - mailwebuser
 
 # mail domains
 additional_dns_maildomains: 'mail.l3d.space imap.l3d.space smtp.l3d.space'
+
+
+nginx_sites:
+  - name: 'mail.l3d.space'
+    webroot:
+      user: 'mailwebuser'
+
+acme_notification_email: "acme_{{ inventory_hostname }}@l3d.yt"
 
 # firewall
 firewall_allowed_tcp_ports:
