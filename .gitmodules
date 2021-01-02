@@ -46,3 +46,6 @@
 [submodule "roles/unbound"]
 	path = roles/unbound
 	url = git@git.ccczh.ch:ansible-roles/role-unbound.git
+[submodule "roles/geerlingguy.mysql"]
+	path = roles/geerlingguy.mysql
+	url = https://github.com/geerlingguy/ansible-role-mysql.git
