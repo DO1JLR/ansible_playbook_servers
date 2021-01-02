@@ -11,6 +11,9 @@ users:
 accounts:
   - l3d
 
+# mail domains
+additional_dns_maildomains: 'mail.l3d.space imap.l3d.space smtp.l3d.space'
+
 # firewall
 firewall_allowed_tcp_ports:
   - "22"

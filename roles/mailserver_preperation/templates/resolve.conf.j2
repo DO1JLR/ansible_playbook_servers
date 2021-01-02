@@ -1,0 +1,7 @@
+# {{ ansible_managed }}
+nameserver ::1
+nameserver 127.0.0.1
+{% if set_additional_nameserver -%}
+nameserver {{ additional_v4nameserver }}
+nameserver {{ additional_v6nameserver }}
+{%- endif %}

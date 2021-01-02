@@ -10,7 +10,7 @@
   lineinfile:
     dest: /etc/hosts
     regexp: "^127.0.1.1"
-    line: "127.0.1.1 {{ inventory_hostname }} {{ ansible_hostname }}"
+    line: "127.0.1.1 {{ inventory_hostname }} {{ ansible_hostname }} {{ additional_dns_maildomains }}"
     state: present
 
 - name: Set /etc/mailname
@@ -18,3 +18,12 @@
   copy:
     dest: "/etc/mailname"
     content: "{{ inventory_hostname }}"
+
+- name: set own dns resolver
+  become: true
+  template:
+    src: templates/resolve.conf.j2
+    dest: /etc/resolv.conf
+    mode: 0644
+    owner: root
+    group: root
