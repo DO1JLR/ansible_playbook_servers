@@ -43,3 +43,6 @@
 [submodule "roles/robertdebock.dovecot"]
 	path = roles/robertdebock.dovecot
 	url = https://github.com/robertdebock/ansible-role-dovecot.git
+[submodule "roles/unbound"]
+	path = roles/unbound
+	url = git@git.ccczh.ch:ansible-roles/role-unbound.git

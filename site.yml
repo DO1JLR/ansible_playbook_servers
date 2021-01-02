@@ -30,5 +30,6 @@
   hosts: mail
   roles:
     - { role: mailserver_preperation, tags: [mail,mailserver_preperation,prep,mailserver]}
+    - { role: unbound, tags: [mail,unbound]}
     - { role: robertdebock.dovecot, tags: [mail,postfix]}
 #    - { role: dovecot, tags: [mail,dovecot]}
