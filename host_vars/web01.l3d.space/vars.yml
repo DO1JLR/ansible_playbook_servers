@@ -61,11 +61,11 @@ nginx_sites:
   - name: 'www.podcast.c3woc.eu'
 
 
-acme_notification_email: "acme_{{ inventory_hostname }}@l3d.yt"
+acme_notification_email: "{{ _acme_notification_email }}"
 
 # firewall
+fail2ban_destemail: "{{ _fail2ban_destemail }}"
 firewall_allowed_tcp_ports:
   - "22"
   - "80"
   - "443"
-fail2ban_destemail: "fail2ban_notify_{{ inventory_hostname }}@l3d.yt"

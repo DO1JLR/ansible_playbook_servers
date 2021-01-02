@@ -28,15 +28,16 @@ nginx_sites:
     webroot:
       user: 'mailwebuser'
 
-acme_notification_email: "acme_{{ inventory_hostname }}@l3d.yt"
+# letsencrypt
+acme_notification_email: "{{ _acme_notification_email }}"
 
 # firewall
+fail2ban_destemail: "{{ _fail2ban_destemail }}"
 firewall_allowed_tcp_ports:
   - "22"
   - "25"
   - "80"
   - "443"
-fail2ban_destemail: "fail2ban_notify_{{ inventory_hostname }}@l3d.yt"
 
 # mysql
 mysql_bind_address: '127.0.0.1'
