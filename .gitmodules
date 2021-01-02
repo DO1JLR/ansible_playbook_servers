@@ -40,3 +40,6 @@
 [submodule "roles/robertdebock.fail2ban"]
 	path = roles/robertdebock.fail2ban
 	url = https://github.com/robertdebock/ansible-role-fail2ban.git
+[submodule "roles/robertdebock.dovecot"]
+	path = roles/robertdebock.dovecot
+	url = https://github.com/robertdebock/ansible-role-dovecot.git

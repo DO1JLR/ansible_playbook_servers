@@ -26,8 +26,8 @@
     - { role: nginx2, tags: [web,nginx]}
     - { role: goaccess, tags: [web,goaccess]}
 
-#- name: deploy mail config
-#  hosts: mail
-#  roles:
-#    - { role: postfix, tags: [mail,postfix]}
+- name: deploy mail config
+  hosts: mail
+  roles:
+    - { role: robertdebock.dovecot, tags: [mail,postfix]}
 #    - { role: dovecot, tags: [mail,dovecot]}
