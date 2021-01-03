@@ -3,3 +3,5 @@ set_additional_nameserver: true
 additional_v4nameserver: '46.182.19.48'
 additional_v6nameserver: '2a02:2970:1002::18'
 additional_dns_maildomains: "{{ ansible_fqdn }}"
+
+mailserver_domain: "{{ ansible_fqdn }}"

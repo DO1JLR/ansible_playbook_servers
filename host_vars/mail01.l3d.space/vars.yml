@@ -42,3 +42,6 @@ firewall_allowed_tcp_ports:
 # mysql
 mysql_bind_address: "{{ _mysql_bind_address }}"
 mysql_root_password: "{{ _mysql_root_password }}"
+
+# mailserver
+mailserver_domain: "{{ inventory_hostname }}"
