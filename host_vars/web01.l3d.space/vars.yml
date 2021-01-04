@@ -59,6 +59,8 @@ nginx_sites:
   - name: 'www.podcast.c3vvoc.de'
   - name: 'podcast.c3woc.eu'
   - name: 'www.podcast.c3woc.eu'
+  - name: 'angel.systems'
+  - name: 'einhornsystem.de'
 
 
 acme_notification_email: "{{ _acme_notification_email }}"
