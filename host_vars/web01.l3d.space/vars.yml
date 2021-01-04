@@ -23,7 +23,6 @@ users:
     - l3d@business.wingcon.com
 
 
-
 accounts:
   - l3d
   - webwaffel
@@ -63,6 +62,8 @@ nginx_sites:
   - name: 'www.angel.systems'
   - name: 'einhornsystem.de'
   - name: 'www.einhornsystem.de'
+  - name: 'backwesen.de'
+  - name: 'www.backwesen.de'
 
 
 acme_notification_email: "{{ _acme_notification_email }}"
@@ -73,3 +74,34 @@ firewall_allowed_tcp_ports:
   - "22"
   - "80"
   - "443"
+
+# gitea settings
+gitea_http_domain: 'backwesen.de'
+gitea_root_url: 'https://backwesen.de'
+gitea_protocol: 'https'
+gitea_shell: '/bin/bash'
+gitea_lfs_server_enabled: true
+gitea_repository_root: "{{ gitea_home }}/repos"
+gitea_start_ssh: "{{ _gitea_start_ssh }}"
+
+# gitea db
+gitea_db_type: postgres
+gitea_db_host: "{{ _gitea_db_host }}"
+gitea_db_name: "{{ _gitea_db_name }}"
+gitea_db_user: "{{ _gitea_db_user }}"
+gitea_db_password: "{{ _gitea_db_password }}"
+gitea_db_ssl: "{{ _gitea_db_ssl }}"
+gitea_db_path: false
+
+# gitea other
+gitea_fail2ban_enabled: true
+gitea_metrics_enabled: true
+gitea_metrics_token: "{{ _gitea_metrics_token }}"
+gitea_repo_indexer_enabled: true
+
+# gitea secrets
+gitea_secret_key: "{{ _gitea_secret_key }}"
+gitea_internal_token: "{{ _gitea_internal_token }}"
+gitea_disable_git_hooks: "{{ _gitea_disable_git_hooks }}"
+gitea_disable_registration: "{{ _gitea_disable_registration }}"
+gitea_show_registration_button: "{{ _gitea_show_registration_button }}"
