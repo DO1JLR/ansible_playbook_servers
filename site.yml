@@ -24,6 +24,8 @@
     - { role: acmetool_fix, tags: [web,acmetool]}
     - { role: acmetool2, tags: [web,acmetool]}
     - { role: nginx2, tags: [web,nginx]}
+    - { role: geerlingguy.mysql, tags: [web,git,mysql]}
+    - { role: gitea, tags: [web,gitea,git]}
     - { role: goaccess, tags: [web,goaccess]}
 
 - name: deploy mail config

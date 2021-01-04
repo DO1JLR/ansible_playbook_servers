@@ -1,4 +1,5 @@
 ---
+postgres_users_no_log: false
 users:
   l3d:
     - l3d@pinkie.l3d.yt
@@ -78,14 +79,15 @@ firewall_allowed_tcp_ports:
 # gitea settings
 gitea_http_domain: 'backwesen.de'
 gitea_root_url: 'https://backwesen.de'
-gitea_protocol: 'https'
+gitea_protocol: 'http'
 gitea_shell: '/bin/bash'
 gitea_lfs_server_enabled: true
+gitea_lfs_content_path: "{{ gitea_home }}/data/lfs"
 gitea_repository_root: "{{ gitea_home }}/repos"
 gitea_start_ssh: "{{ _gitea_start_ssh }}"
 
 # gitea db
-gitea_db_type: postgres
+gitea_db_type: mysql
 gitea_db_host: "{{ _gitea_db_host }}"
 gitea_db_name: "{{ _gitea_db_name }}"
 gitea_db_user: "{{ _gitea_db_user }}"
