@@ -15,3 +15,6 @@ users:
 
 accounts:
   - l3d
+
+# version check for all supported roles
+submodules_versioncheck: true
