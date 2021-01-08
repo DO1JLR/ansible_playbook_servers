@@ -21,19 +21,43 @@ insert into domains (domain) values ('{{ mailserver_domain }}');
     FOREIGN KEY (`domain`) REFERENCES `domains` (`domain`)
   );
 
-  mailserver_accounts:
-    - username: 'foo'
+  mailserver__accounts:
+    - username: 'alice'
       domain: 'example.com'
       password_hash: 
       quota: '0'
       enabled: true
       sendonly: false
 
+  mailserver__alias:
+    - src_username: 'bob'
+      src_domain: 'example.com'
+      dest_username: 'alice'
+      dest_domain: 'example.com'
+      enabled: true
+
 #}
 {% for account in mailserver__accounts %}
-insert into accounts (username, domain, password, quota, enabled, sendonly) values ('{{ account["username"] }}', '{{ account["domain"] }}', '{{ account["password_hash"] }}', {{ account["quota"]|default(0) | int }}, {{ account["enabled"] | default(true) | | ternary('true', 'false') }} , {{ account["sendonly"] | default(false) | | ternary('true', 'false' }});
+{#
+  INSERT into accounts (username, domain, password, quota, enabled, sendonly) values ('{{ account["username"] }}', '{{ account["domain"] }}', '{{ account["password_hash"] }}', {{ account["quota"]|default(0) | int }}, {{ account["enabled"] | default(true) | | ternary('true', 'false') }} , {{ account["sendonly"] | default(false) | | ternary('true', 'false' }});
+#}
+REPLACE into accounts
+  (username, domain, password, quota, enabled, sendonly)
+values
+  ('{{ account["username"] }}', '{{ account["domain"] }}', '{{ account["password_hash"] }}', {{ account["quota"]|default(0) | int }}, {{ account["enabled"] | default(true) | | ternary('true', 'false') }} , {{ account["sendonly"] | default(false) | | ternary('true', 'false' }});
 {% endfor %}
 {#-
   create all mail aliases and stuff like that...
 #}
-insert into aliases (source_username, source_domain, destination_username, destination_domain, enabled) values ('alias', '{{ domain }}', '{{ mail_user }}', '{{ domain }}', true);
+{% for alias in mailserver__alias %}
+{#
+  INSERT into aliases
+    (source_username, source_domain, destination_username, destination_domain, enabled)
+  values
+    ('{{ alias["src_username"] }}', '{{ alias["src_domain"] }}', '{{ alias["dest_username"] }}', '{{ alias["dest_domain"] }}', {{ alias["enabled"] | default(true) | | ternary('true', 'false') }});
+#}
+REPLACE into aliases
+  (source_username, source_domain, destination_username, destination_domain, enabled)
+values
+  ('{{ alias["src_username"] }}', '{{ alias["src_domain"] }}', '{{ alias["dest_username"] }}', '{{ alias["dest_domain"] }}', {{ alias["enabled"] | default(true) | | ternary('true', 'false') }});
+{% endfor %}
