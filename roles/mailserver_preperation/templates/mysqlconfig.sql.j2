@@ -1,4 +1,39 @@
+{#- which table are we setting up #}
 use vmail;
+{#-
+  setup mailserver domain
+#}
 insert into domains (domain) values ('{{ mailserver_domain }}');
-insert into accounts (username, domain, password, quota, enabled, sendonly) values ('{{ mail_user }}', '{{ domain }}', '{{ mail_user_pass_hash }}', 2048, true, false);
+{#-
+  create all mail users, domains and enter password hashes...
+
+
+  CREATE TABLE `accounts` (
+    `id` int unsigned NOT NULL AUTO_INCREMENT,
+    `username` varchar(64) NOT NULL,
+    `domain` varchar(255) NOT NULL,
+    `password` varchar(255) NOT NULL,
+    `quota` int unsigned DEFAULT '0',
+    `enabled` boolean DEFAULT '0',
+    `sendonly` boolean DEFAULT '0',
+    PRIMARY KEY (id),
+    UNIQUE KEY (`username`, `domain`),
+    FOREIGN KEY (`domain`) REFERENCES `domains` (`domain`)
+  );
+
+  mailserver_accounts:
+    - username: 'foo'
+      domain: 'example.com'
+      password_hash: 
+      quota: '0'
+      enabled: true
+      sendonly: false
+
+#}
+{% for account in mailserver__accounts %}
+insert into accounts (username, domain, password, quota, enabled, sendonly) values ('{{ account["username"] }}', '{{ account["domain"] }}', '{{ account["password_hash"] }}', {{ account["quota"]|default(0) | int }}, {{ account["enabled"] | default(true) | | ternary('true', 'false') }} , {{ account["sendonly"] | default(false) | | ternary('true', 'false' }});
+{% endfor %}
+{#-
+  create all mail aliases and stuff like that...
+#}
 insert into aliases (source_username, source_domain, destination_username, destination_domain, enabled) values ('alias', '{{ domain }}', '{{ mail_user }}', '{{ domain }}', true);
