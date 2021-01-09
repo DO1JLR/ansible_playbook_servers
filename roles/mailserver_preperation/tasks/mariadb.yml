@@ -22,18 +22,20 @@
     dest: /root/.mariadb_schema/config.sql
   register: mysqlconfig
 
-- name: Import database schema
+- name: create database schema
   become: true
-  mssql_db:
+  community.mysql.mysql_db:
     name: vmail
+    encoding: 'utf8'
     state: import
     target: '/root/.mariadb_schema/schema.sql'
   when: mysqlschema.changed
 
 - name: Import database schema
   become: true
-  mssql_db:
+  community.mysql.mysql_db:
     name: vmail
+    encoding: 'utf8'
     state: import
     target: '/root/.mariadb_schema/config.sql'
   when: mysqlconfig.changed

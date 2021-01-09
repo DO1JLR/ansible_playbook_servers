@@ -1,4 +1,6 @@
 ---
+- include_tasks: versioncheck.yml
+  when: submodules_versioncheck|bool
 
 - name: "set {{ inventory_hostname }} as hostname"
   become: true
