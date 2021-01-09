@@ -13,29 +13,13 @@
   copy:
     src: files/schema.sql
     dest: /root/.mariadb_schema/schema.sql
-  register: mysqlschema
+    mode: '0644'
+  notify: create database schema
 
 - name: Copy mail config
   become: true
   template:
     src: templates/mysqlconfig.sql.j2
     dest: /root/.mariadb_schema/config.sql
-  register: mysqlconfig
-
-- name: create database schema
-  become: true
-  community.mysql.mysql_db:
-    name: vmail
-    encoding: 'utf8'
-    state: import
-    target: '/root/.mariadb_schema/schema.sql'
-  when: mysqlschema.changed
-
-- name: Import database schema
-  become: true
-  community.mysql.mysql_db:
-    name: vmail
-    encoding: 'utf8'
-    state: import
-    target: '/root/.mariadb_schema/config.sql'
-  when: mysqlconfig.changed
+    mode: '0644'
+  notify: import mail database config

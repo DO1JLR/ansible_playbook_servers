@@ -1,3 +1,3 @@
 ---
-playbook_version_number: 33 # should be int
+playbook_version_number: 34 # should be int
 playbook_version_path: 'role-mailserver_roles-ansile_github.com.version'
