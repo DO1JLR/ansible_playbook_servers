@@ -1,11 +1,22 @@
 ---
-set_additional_nameserver: true
-additional_v4nameserver: '46.182.19.48'
-additional_v6nameserver: '2a02:2970:1002::18'
-additional_dns_maildomains: "{{ ansible_fqdn }}"
 
 # which is the reverse dns and dns name of this mail server
 mailserver_domain: "{{ ansible_fqdn }}"
+
+# configure proper dns resolution
+set_additional_nameserver: true
+additional_v4nameserver: '46.182.19.48'
+additional_v6nameserver: '2a02:2970:1002::18'
+
+# add additional entrys do your local /etc/hosts for the localhost entry
+additional_dns_maildomains: "{{ mailserver_domain }}"
+
+# mailser settings
+mailserver__user: 'vmail'
+mailserver__group: 'vmail'
+mailserver__home: '/var/vmail'
+mailserver__shell: '/bin/false'
+
 
 mailserver__domains: []
 #  - fqdn: example.com

@@ -2,33 +2,11 @@
 - include_tasks: versioncheck.yml
   when: submodules_versioncheck|bool
 
-- name: "set {{ inventory_hostname }} as hostname"
-  become: true
-  hostname:
-    name: "{{ inventory_hostname }}"
+- name: configure local hostnames
+  include_tasks: hosts.yml
 
-- name: Add hostname to /etc/hosts
-  become: true
-  lineinfile:
-    dest: /etc/hosts
-    regexp: "^127.0.1.1"
-    line: "127.0.1.1 {{ inventory_hostname }} {{ ansible_hostname }} {{ additional_dns_maildomains }}"
-    state: present
-
-- name: Set /etc/mailname
-  become: true
-  copy:
-    dest: "/etc/mailname"
-    content: "{{ inventory_hostname }}"
-
-- name: set own dns resolver
-  become: true
-  template:
-    src: templates/resolve.conf.j2
-    dest: /etc/resolv.conf
-    mode: 0644
-    owner: root
-    group: root
+- name: configure vmail user
+  include_tasks: user.yml
 
 - name: configure mariadb
   include_tasks: mariadb.yml

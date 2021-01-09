@@ -1,0 +1,32 @@
+---
+- name: create mail group
+  group:
+    name: "{{ mailserver__group }}"
+    state: present
+
+- name: Create mail user
+  become: true
+  user:
+    name: "{{ mailserver__user }}"
+    home: "{{ mailserver__home }}"
+    group: "{{ mailserver__group }}"
+    shell: "{{ mailserver__shell }}"
+
+- name: Create mail user sieve directory
+  become: true
+  file:
+    path: "{{ mailserver__home }}/sieve/global"
+    state: directory
+    owner: vmail
+    group: vmail
+    mode: 0770
+    recurse: true
+
+- name: Create mail user mailbox directory
+  bevome: true
+  file:
+    path: /var/vmail/mailboxes
+    state: directory
+    owner: vmail
+    group: vmail
+    mode: 0770
