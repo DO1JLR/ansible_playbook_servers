@@ -1,4 +1,6 @@
-{#- which table are we setting up #}
+{#-
+  which table are we setting up
+-#}
 use vmail;
 {#-
   setup mailserver domain
@@ -24,13 +26,14 @@ insert into domains (domain) values ('{{ mailserver_domain }}');
   mailserver__accounts:
     - username: 'alice'
       domain: 'example.com'
-      password_hash: 
+      password_hash:  # generate with $(doveadm pw -s SHA512-CRYPT)
+        # or $ python -c 'import crypt,getpass; print(crypt.crypt(getpass.getpass(), crypt.mksalt(crypt.METHOD_SHA512)))'
       quota: '0'
       enabled: true
       sendonly: false
 
   mailserver__alias:
-    - src_username: 'bob'
+    - src_username: 'bob' # null for catchall
       src_domain: 'example.com'
       dest_username: 'alice'
       dest_domain: 'example.com'
@@ -59,5 +62,11 @@ values
 REPLACE into aliases
   (source_username, source_domain, destination_username, destination_domain, enabled)
 values
-  ('{{ alias["src_username"] }}', '{{ alias["src_domain"] }}', '{{ alias["dest_username"] }}', '{{ alias["dest_domain"] }}', {{ alias["enabled"] | default(true) | | ternary('true', 'false') }});
+  (
+    {%- if {{ alias["src_username"] }} == 'null' -%}
+      null
+    {%- else -%}
+      '{{ alias["src_username"] }}'
+    {%- endif -%}
+      , '{{ alias["src_domain"] }}', '{{ alias["dest_username"] }}', '{{ alias["dest_domain"] }}', {{ alias["enabled"] | default(true) | | ternary('true', 'false') }});
 {% endfor %}
