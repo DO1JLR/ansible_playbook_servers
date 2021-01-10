@@ -1,0 +1,7 @@
+driver=mysql
+connect = "host=localhost dbname={{ mailserver__mysql_database }} user={{ mailserver__mysql_user }} password={{ mailserver__mysql_password }}"
+default_pass_scheme = SHA512-CRYPT
+
+password_query = SELECT username AS user, domain, password FROM accounts WHERE username = '%Ln' AND domain = '%Ld' and enabled = true;
+user_query = SELECT concat('*:storage=', quota, 'M') AS quota_rule FROM accounts WHERE username = '%Ln' AND domain = '%Ld' AND sendonly = false;
+iterate_query = SELECT username, domain FROM accounts where sendonly = false;

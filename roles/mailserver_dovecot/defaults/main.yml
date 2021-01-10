@@ -1,0 +1,18 @@
+---
+
+# perform basic versionscheck (true is recomended)
+submodules_versioncheck: false
+
+mailserver__user: 'vmail'
+mailserver__group: 'vmail'
+mailserver__home: '/var/vmail'
+
+
+mailserver__ssl_cert: '/etc/letsencrypt/live/{{ ansible_fqdn }}/fullchain.pem'
+mailserver__ssl_key: '/etc/letsencrypt/live/{{ ansible_fqdn }}/privkey.pem'
+
+mailserver__mysql_user: 'vmail'
+mailserver__mysql_database: 'vmail'
+mailserver__mysql_password: 'StrongPa$$w0rt'
+
+mailserver__postmaster_address: "postmaster@{{ ansible_fqdn }}"

@@ -1,0 +1,27 @@
+---
+- include_tasks: versioncheck.yml
+  when: submodules_versioncheck|bool
+
+- name: Delete default config
+  become: true
+  file:
+    state: absent
+    path: /etc/dovecot/
+
+- name: Create config directory
+  become: true
+  file:
+    path: /etc/dovecot
+    state: directory
+    mode: '0755'
+
+- name: create dovecot config
+  include_tasks: templates.yml
+
+- name: create dhparam
+  become: true
+  openssl_dhparam:
+    path: '/etc/dovecot/dh4096.pem'
+    size: 4096
+
+

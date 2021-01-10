@@ -22,6 +22,11 @@ accounts:
 # mail domains
 additional_dns_maildomains: 'mail.l3d.space imap.l3d.space smtp.l3d.space'
 
+# mail mysql access
+mailserver__mysql_password: "{{ _mailserver__mysql_password }}"
+mailserver__mysql_user: "{{ _mailserver__mysql_user }}"
+mailserver__ssl_cert: "{{ _mailserver__ssl_cert }}"
+mailserver__ssl_key: "{{ _mailserver__ssl_key }}"
 
 nginx_sites:
   - name: 'mail.l3d.space'
@@ -42,6 +47,7 @@ firewall_allowed_tcp_ports:
 # mysql
 mysql_bind_address: "{{ _mysql_bind_address }}"
 mysql_root_password: "{{ _mysql_root_password }}"
+mailserver__mysql_database: "{{ _mailserver__mysql_database }}"
 
 # mailserver
 mailserver_domain: "{{ inventory_hostname }}"

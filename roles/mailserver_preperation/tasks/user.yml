@@ -23,10 +23,10 @@
     recurse: true
 
 - name: Create mail user mailbox directory
-  bevome: true
+  become: true
   file:
     path: /var/vmail/mailboxes
     state: directory
     owner: vmail
     group: vmail
-    mode: 0770
+    mode: '0770'

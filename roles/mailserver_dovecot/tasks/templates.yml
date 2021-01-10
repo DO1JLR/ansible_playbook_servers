@@ -1,0 +1,42 @@
+---
+
+- name: Template dovecot.conf
+  become: true
+  template:
+    src: templates/dovecot.conf.j2
+    dest: /etc/dovecot/dovecot.conf
+    mode: "0644"
+
+- name: Template dovecot-sql.conf
+  become: true
+  template:
+    src: templates/dovecot-sql.j2
+    dest: /etc/dovecot/dovecot-sql.conf
+    mode: "0440"
+
+- name: Copy spam-global.sieve
+  become: true
+  copy:
+    src: files/spam-global.sieve
+    dest: /var/vmail/sieve/global/spam-global.sieve
+    owner: vmail
+    group: vmail
+    mode: "0644"
+
+- name: Copy learn-spam.sieve
+  become: true
+  copy:
+    src: files/learn-spam.sieve
+    dest: /var/vmail/sieve/global/learn-spam.sieve
+    owner: vmail
+    group: vmail
+    mode: "0644"
+
+- name: Copy learn-ham.sieve
+  become: true
+  copy:
+    src: files/learn-ham.sieve
+    dest: /var/vmail/sieve/global/learn-ham.sieve
+    owner: vmail
+    group: vmail
+    mode: "0644"
