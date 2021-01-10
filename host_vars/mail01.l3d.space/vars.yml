@@ -22,6 +22,9 @@ accounts:
 # mail domains
 additional_dns_maildomains: 'mail.l3d.space imap.l3d.space smtp.l3d.space'
 
+# mailserver
+mailserver_domain: "{{ _mailserver_domain }}"
+
 # mail mysql access
 mailserver__mysql_password: "{{ _mailserver__mysql_password }}"
 mailserver__mysql_user: "{{ _mailserver__mysql_user }}"
@@ -49,5 +52,7 @@ mysql_bind_address: "{{ _mysql_bind_address }}"
 mysql_root_password: "{{ _mysql_root_password }}"
 mailserver__mysql_database: "{{ _mailserver__mysql_database }}"
 
-# mailserver
-mailserver_domain: "{{ inventory_hostname }}"
+# postfix
+postfix__myhostname: "{{ mailserver_domain }}"
+postfix__tls_cert: "{{ mailserver__ssl_cert }}"
+postfix__tls_key: "{{ mailserver__ssl_key }}"

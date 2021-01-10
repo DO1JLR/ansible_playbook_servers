@@ -8,8 +8,8 @@ mailserver__group: 'vmail'
 mailserver__home: '/var/vmail'
 
 
-mailserver__ssl_cert: '/etc/letsencrypt/live/{{ ansible_fqdn }}/fullchain.pem'
-mailserver__ssl_key: '/etc/letsencrypt/live/{{ ansible_fqdn }}/privkey.pem'
+mailserver__ssl_cert: "/var/lib/acme/live/{{ ansible_fqdn }}/fullchain"
+mailserver__ssl_key: "/var/lib/acme/live/{{ ansible_fqdn }}/privkey"
 
 mailserver__mysql_user: 'vmail'
 mailserver__mysql_database: 'vmail'

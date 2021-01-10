@@ -55,3 +55,6 @@
 [submodule "roles/geerlingguy.postgresql"]
 	path = roles/geerlingguy.postgresql
 	url = https://github.com/geerlingguy/ansible-role-postgresql.git
+[submodule "roles/postfix"]
+	path = roles/postfix
+	url = https://github.com/DO1JLR/ansible_roler_postfix.git
