@@ -28,8 +28,14 @@ mailserver_domain: "{{ _mailserver_domain }}"
 # mail mysql access
 mailserver__mysql_password: "{{ _mailserver__mysql_password }}"
 mailserver__mysql_user: "{{ _mailserver__mysql_user }}"
+mailserver__mysql_database: "{{ _mailserver__mysql_database }}"
 mailserver__ssl_cert: "{{ _mailserver__ssl_cert }}"
 mailserver__ssl_key: "{{ _mailserver__ssl_key }}"
+postfix__db_user: "{{ _mailserver__mysql_user }}"
+postfix__db_password: "{{ _mailserver__mysql_password }}"
+postfix__db_name: "{{ _mailserver__mysql_database }}"
+
+
 
 nginx_sites:
   - name: 'mail.l3d.space'
@@ -50,7 +56,6 @@ firewall_allowed_tcp_ports:
 # mysql
 mysql_bind_address: "{{ _mysql_bind_address }}"
 mysql_root_password: "{{ _mysql_root_password }}"
-mailserver__mysql_database: "{{ _mailserver__mysql_database }}"
 
 # postfix
 postfix__myhostname: "{{ mailserver_domain }}"
