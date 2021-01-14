@@ -1,4 +1,9 @@
 ---
+- name: check if ansible is not to old
+  hosts: localhost
+  roles:
+    - { role: do1jlr.ansible_version, tags: [default,version,default], gather_facts: no}
+
 
 - name: general roles for all hosts
   hosts: all
