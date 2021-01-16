@@ -36,7 +36,7 @@
 - name: deploy mail config
   hosts: mail
   roles:
-    - { role: mailserver_preperation, tags: [mail,mailserver_preperation,prep,mailserver]}
+    - { role: do1jlr.mailserver_preperation, tags: [mail,mailserver_preperation,prep,mailserver]}
     - { role: unbound, tags: [mail,unbound]}
     - { role: webhost2, tags: [mail,webhost]}
     - { role: acmetool_fix, tags: [mail,acmetool]}
