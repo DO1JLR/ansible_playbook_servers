@@ -65,6 +65,10 @@ nginx_sites:
   - name: 'www.einhornsystem.de'
   - name: 'backwesen.de'
   - name: 'www.backwesen.de'
+  - name: 'c3nom.de'
+  - name: 'www.c3nom.de'
+  - name: 'c3doc.de'
+  - name: 'www.c3doc.de'
 
 
 acme_notification_email: "{{ _acme_notification_email }}"
