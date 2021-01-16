@@ -64,3 +64,6 @@
 [submodule "roles/do1jlr.mailserver_preperation"]
 	path = roles/do1jlr.mailserver_preperation
 	url = https://github.com/DO1JLR/ansible_role_mailserver_preperations.git
+[submodule "roles/do1jlr.dovecot"]
+	path = roles/do1jlr.dovecot
+	url = https://github.com/DO1JLR/ansible_role_dovecot.git
