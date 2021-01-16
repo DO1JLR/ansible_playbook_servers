@@ -43,5 +43,5 @@
     - { role: acmetool2, tags: [mail,acmetool]}
     - { role: nginx2, tags: [mail,nginx]}
     - { role: geerlingguy.mysql, tags: [mail,mysql,mariadb]}
-    - { role: mailserver_dovecot, tags: [mail,dovecot,mailserver_dovecot]}
+    - { role: do1jlr.dovecot, tags: [mail,dovecot,mailserver_dovecot]}
     - { role: postfix, tags: [mail,postfix]}
