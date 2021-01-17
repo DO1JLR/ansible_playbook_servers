@@ -104,6 +104,7 @@ gitea_fail2ban_enabled: true
 gitea_metrics_enabled: true
 gitea_metrics_token: "{{ _gitea_metrics_token }}"
 gitea_repo_indexer_enabled: true
+gitea_enable_notify_mail: true
 
 # gitea secrets
 gitea_secret_key: "{{ _gitea_secret_key }}"
