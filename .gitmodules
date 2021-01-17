@@ -67,3 +67,6 @@
 [submodule "roles/do1jlr.dovecot"]
 	path = roles/do1jlr.dovecot
 	url = https://github.com/DO1JLR/ansible_role_dovecot.git
+[submodule "roles/acmetool_fix"]
+	path = roles/acmetool_fix
+	url = https://github.com/DO1JLR/ansible_role_acmetool_debian_fix.git
