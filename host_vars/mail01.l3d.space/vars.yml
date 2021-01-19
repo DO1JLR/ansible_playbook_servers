@@ -35,8 +35,6 @@ postfix__db_user: "{{ _mailserver__mysql_user }}"
 postfix__db_password: "{{ _mailserver__mysql_password }}"
 postfix__db_name: "{{ _mailserver__mysql_database }}"
 
-
-
 nginx_sites:
   - name: 'mail.l3d.space'
     webroot:
