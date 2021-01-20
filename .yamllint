@@ -6,3 +6,9 @@ rules:
   line-length:
     max: 150
     level: warning
+  commas:
+    max-spaces-before: 0
+    min-spaces-after: 0
+  braces:
+    max-spaces-inside: 1
+
