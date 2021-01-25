@@ -69,7 +69,8 @@ nginx_sites:
   - name: 'www.c3nom.de'
   - name: 'c3doc.de'
   - name: 'www.c3doc.de'
-
+  - name: 'wtf-kooperative.de'
+  - name: 'www.wtf-kooperative.de'
 
 acme_notification_email: "{{ _acme_notification_email }}"
 
