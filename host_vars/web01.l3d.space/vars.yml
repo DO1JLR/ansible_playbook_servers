@@ -89,6 +89,7 @@ gitea_shell: '/bin/bash'
 gitea_lfs_server_enabled: true
 gitea_lfs_content_path: "{{ gitea_home }}/data/lfs"
 gitea_lfs_jwt_secret: "{{ _gitea_lfs_jwt_secret }}"
+gitea_oauth2_jwt_secret: "{{ _gitea_oauth2_jwt_secret }}"
 gitea_repository_root: "{{ gitea_home }}/repos"
 gitea_start_ssh: "{{ _gitea_start_ssh }}"
 
