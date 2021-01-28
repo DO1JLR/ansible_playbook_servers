@@ -11,6 +11,7 @@
     - { role: base, tags: [default,packages,base]}
     - { role: ranger, tags: [packages,ranger]}
     - { role: bat, tags: [packages,bat], when: [ansible_os_family == 'Debian']}
+    - { role: unattended_upgrades, tags: [default,unattended,unattended_upgrades,security], become: true, when: ansible_distribution == 'Debian'}
 
 - name: user specific roles for all hosts
   hosts: all

@@ -73,3 +73,6 @@
 [submodule "roles/do1jlr.rspamd"]
 	path = roles/do1jlr.rspamd
 	url = https://github.com/roles-ansible/ansible_role_rspamd.git
+[submodule "roles/unattended_upgrades"]
+	path = roles/unattended_upgrades
+	url = https://github.com/jnv/ansible-role-unattended-upgrades.git
