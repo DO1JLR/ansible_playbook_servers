@@ -23,6 +23,21 @@ users:
     - l3d@backup-rsa.l3d.yt
     - l3d@business.wingcon.com
 
+sshd__allowed_users:
+  - "root"
+  - "ansible"
+  - "l3d"
+  - "webwaffel"
+  - "webwaffelpodcast"
+  - "gitea"
+
+sshd__allowed_groups:
+  - "root"
+  - "ansible"
+  - "l3d"
+  - "webwaffel"
+  - "webwaffelpodcast"
+  - "gitea"
 
 accounts:
   - l3d
@@ -82,6 +97,7 @@ firewall_allowed_tcp_ports:
   - "443"
 
 # gitea settings
+gitea_app_name: 'backwesen.de'
 gitea_http_domain: 'backwesen.de'
 gitea_root_url: 'https://backwesen.de'
 gitea_protocol: 'http'
@@ -91,7 +107,9 @@ gitea_lfs_content_path: "{{ gitea_home }}/data/lfs"
 gitea_lfs_jwt_secret: "{{ _gitea_lfs_jwt_secret }}"
 gitea_oauth2_jwt_secret: "{{ _gitea_oauth2_jwt_secret }}"
 gitea_repository_root: "{{ gitea_home }}/repos"
+gitea_ssh_domain: "{{ gitea_http_domain }}"
 gitea_start_ssh: "{{ _gitea_start_ssh }}"
+gitea_ssh_port: 22
 
 # gitea db
 gitea_db_type: mysql
