@@ -21,7 +21,7 @@
 	url = https://github.com/chaos-bodensee/role_sshd.git
 [submodule "files/ssh_public_keys"]
 	path = files/ssh_public_keys
-	url = https://gitea.see-base.de/toolbox/ssh-public-keys.git
+	url = https://backwesen.de/ansible/ssh_public_keys.git
 [submodule "roles/nginx2"]
 	path = roles/nginx2
 	url = git@git.ccczh.ch:ansible-roles/role-nginx_new2.git

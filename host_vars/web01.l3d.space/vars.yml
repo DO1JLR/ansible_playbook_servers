@@ -110,6 +110,8 @@ gitea_repository_root: "{{ gitea_home }}/repos"
 gitea_ssh_domain: "{{ gitea_http_domain }}"
 gitea_start_ssh: "{{ _gitea_start_ssh }}"
 gitea_ssh_port: 22
+gitea_require_signin: false 
+gitea_enable_notify_mail: true
 
 # gitea db
 gitea_db_type: mysql
