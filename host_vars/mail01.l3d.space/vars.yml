@@ -24,6 +24,7 @@ additional_dns_maildomains: 'mail.l3d.space imap.l3d.space smtp.l3d.space'
 
 # mailserver
 mailserver_domain: "{{ _mailserver_domain }}"
+postfix__inet_interfaces: "127.0.0.1, ::1, {{ hostvars[ inventory_hostname ].ansible_default_ipv4.address }}, {{ hostvars[ inventory_hostname ].ansible_default_ipv6.address }}"
 
 # mail mysql access
 mailserver__mysql_password: "{{ _mailserver__mysql_password }}"
