@@ -4,11 +4,11 @@ extends: default
 rules:
   # 150 chars should be enough, but don't fail if a line is longer
   line-length:
-    max: 150
+    max: 180
     level: warning
-  commas:
-    max-spaces-before: 0
-    min-spaces-after: 0
-  braces:
-    max-spaces-inside: 1
 
+ignore: |
+  host_vars/mail01.l3d.space/vault.yml
+  host_vars/web01.l3d.space/vault.yml
+  group_vars/all/vault.yml
+  roles/

@@ -2,48 +2,48 @@
 - name: check if ansible is not to old
   hosts: localhost
   roles:
-    - { role: do1jlr.ansible_version, tags: [default,version,default,always], gather_facts: false}
+    - {role: do1jlr.ansible_version, tags: [default, version, default, always], gather_facts: false}
 
 
 - name: general roles for all hosts
   hosts: all
   roles:
-    - { role: base, tags: [default,packages,base]}
-    - { role: ranger, tags: [packages,ranger]}
-    - { role: bat, tags: [packages,bat], when: [ansible_os_family == 'Debian']}
-    - { role: unattended_upgrades, tags: [default,unattended,unattended_upgrades,security], become: true, when: ansible_distribution == 'Debian'}
+    - {role: base, tags: [default, packages, base]}
+    - {role: ranger, tags: [packages, ranger]}
+    - {role: bat, tags: [packages, bat], when: [ansible_os_family == 'Debian']}
+    - {role: unattended_upgrades, tags: [default, unattended, unattended_upgrades, security], become: true, when: ansible_distribution == 'Debian'}
 
 - name: user specific roles for all hosts
   hosts: all
   roles:
-    - { role: users, tags: [default,init,users]}
-    - { role: dotfiles, tags: [default,dotfiles]}
-    - { role: ssh_auth, tags: [default,init,users]}
-    - { role: sshd, tags: [default,init,users]}
-    - { role: geerlingguy.firewall, tags: [default,firewall], become: true}
-    - { role: robertdebock.fail2ban, tags: [default,fail2ban], become: true}
+    - {role: users, tags: [default, init, users]}
+    - {role: dotfiles, tags: [default, dotfiles]}
+    - {role: ssh_auth, tags: [default, init, users]}
+    - {role: sshd, tags: [default, init, users]}
+    - {role: geerlingguy.firewall, tags: [default, firewall], become: true}
+    - {role: robertdebock.fail2ban, tags: [default, fail2ban], become: true}
 
 - name: deploy web config
   hosts: web
   roles:
-    - { role: webhost2, tags: [web,webhost]}
-    - { role: acmetool_fix, tags: [web,acmetool]}
-    - { role: acmetool2, tags: [web,acmetool]}
-    - { role: nginx2, tags: [web,nginx]}
-    - { role: geerlingguy.mysql, tags: [web,git,mysql]}
-    - { role: gitea, tags: [web,gitea,git]}
-    - { role: goaccess, tags: [web,goaccess]}
+    - {role: webhost2, tags: [web, webhost]}
+    - {role: acmetool_fix, tags: [web, acmetool]}
+    - {role: acmetool2, tags: [web, acmetool]}
+    - {role: nginx2, tags: [web, nginx]}
+    - {role: geerlingguy.mysql, tags: [web, git, mysql]}
+    - {role: gitea, tags: [web, gitea, git]}
+    - {role: goaccess, tags: [web, goaccess]}
 
 - name: deploy mail config
   hosts: mail
   roles:
-    - { role: unbound, tags: [mail,unbound]}
-    - { role: geerlingguy.mysql, tags: [mail,mysql,mariadb]}
-    - { role: acmetool_fix, tags: [mail,acmetool]}
-    - { role: webhost2, tags: [mail,webhost]}
-    - { role: acmetool2, tags: [mail,acmetool]}
-    - { role: nginx2, tags: [mail,nginx]}
-    - { role: do1jlr.mailserver_preperation, tags: [mail,mailserver_preperation,prep,mailserver]}
-    - { role: do1jlr.dovecot, tags: [mail,dovecot,mailserver_dovecot]}
-    - { role: postfix, tags: [mail,postfix]}
-    - { role: do1jlr.rspamd, tags: [mail,rspamd,dcim]}
+    - {role: unbound, tags: [mail, unbound]}
+    - {role: geerlingguy.mysql, tags: [mail, mysql, mariadb]}
+    - {role: acmetool_fix, tags: [mail, acmetool]}
+    - {role: webhost2, tags: [mail, webhost]}
+    - {role: acmetool2, tags: [mail, acmetool]}
+    - {role: nginx2, tags: [mail, nginx]}
+    - {role: do1jlr.mailserver_preperation, tags: [mail, mailserver_preperation, prep, mailserver]}
+    - {role: do1jlr.dovecot, tags: [mail, dovecot, mailserver_dovecot]}
+    - {role: postfix, tags: [mail, postfix]}
+    - {role: do1jlr.rspamd, tags: [mail, rspamd]}
