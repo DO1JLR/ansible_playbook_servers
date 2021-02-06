@@ -28,8 +28,8 @@
   roles:
     - {role: webhost2, tags: [web, webhost]}
     - {role: acmetool_fix, tags: [web, acmetool]}
-    - {role: acmetool2, tags: [web, acmetool]}
-    - {role: nginx2, tags: [web, nginx]}
+    - {role: do1jlr.acmetool, tags: [web, acmetool]}
+    - {role: do1jlr.nginx, tags: [web, nginx]}
     - {role: geerlingguy.mysql, tags: [web, git, mysql]}
     - {role: gitea, tags: [web, gitea, git]}
     - {role: goaccess, tags: [web, goaccess]}
@@ -41,8 +41,8 @@
     - {role: geerlingguy.mysql, tags: [mail, mysql, mariadb]}
     - {role: acmetool_fix, tags: [mail, acmetool]}
     - {role: webhost2, tags: [mail, webhost]}
-    - {role: acmetool2, tags: [mail, acmetool]}
-    - {role: nginx2, tags: [mail, nginx]}
+    - {role: do1jlr.acmetool, tags: [mail, acmetool]}
+    - {role: do1jlr.nginx, tags: [mail, nginx]}
     - {role: do1jlr.mailserver_preperation, tags: [mail, mailserver_preperation, prep, mailserver]}
     - {role: do1jlr.dovecot, tags: [mail, dovecot, mailserver_dovecot]}
     - {role: postfix, tags: [mail, postfix]}

@@ -64,6 +64,8 @@ nginx_sites:
   - name: 'www.l3d.space'
   - name: 'ansible.l3d.space'
   - name: 'www.ansible.l3d.space'
+  - name: 'l3d.yt'
+  - name: 'www.l3d.yt'
   - name: 'podcast.c3woc.de'
     webroot:
       user: 'webwaffelpodcast'

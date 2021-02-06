@@ -79,3 +79,9 @@
 [submodule "roles/radicale"]
 	path = roles/radicale
 	url = https://github.com/AnarchoTechNYC/ansible-role-radicale.git
+[submodule "roles/do1jlr.nginx"]
+	path = roles/do1jlr.nginx
+	url = https://github.com/DO1JLR/ansible_role_nginx.git
+[submodule "roles/do1jlr.acmetool"]
+	path = roles/do1jlr.acmetool
+	url = https://github.com/DO1JLR/ansible_role_acmetool.git
