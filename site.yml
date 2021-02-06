@@ -26,7 +26,7 @@
 - name: deploy web config
   hosts: web
   roles:
-    - {role: webhost2, tags: [web, webhost]}
+    - {role: do1jlr.webhost, tags: [web, webhost]}
     - {role: acmetool_fix, tags: [web, acmetool]}
     - {role: do1jlr.acmetool, tags: [web, acmetool]}
     - {role: do1jlr.nginx, tags: [web, nginx]}
@@ -40,7 +40,7 @@
     - {role: unbound, tags: [mail, unbound]}
     - {role: geerlingguy.mysql, tags: [mail, mysql, mariadb]}
     - {role: acmetool_fix, tags: [mail, acmetool]}
-    - {role: webhost2, tags: [mail, webhost]}
+    - {role: do1jlr.webhost, tags: [mail, webhost]}
     - {role: do1jlr.acmetool, tags: [mail, acmetool]}
     - {role: do1jlr.nginx, tags: [mail, nginx]}
     - {role: do1jlr.mailserver_preperation, tags: [mail, mailserver_preperation, prep, mailserver]}
