@@ -60,6 +60,8 @@ nginx_sites:
   - name: 'waffeln.eskalieren.jetzt'
   - name: 'waffeln.fehlerfrei.org'
   - name: 'www.waffeln.fehlerfrei.org'
+  - name: 'waffel.shop'
+  - name: 'www.waffel.shop'
   - name: 'l3d.space'
   - name: 'www.l3d.space'
   - name: 'ansible.l3d.space'
@@ -68,6 +70,8 @@ nginx_sites:
   - name: 'www.l3d.yt'
   - name: 'l3d.ch'
   - name: 'www.l3d.ch'
+  - name: 'l3d.me'
+  - name: 'www.l3d.me'
   - name: 'podcast.c3woc.de'
     webroot:
       user: 'webwaffelpodcast'
