@@ -130,6 +130,13 @@ gitea_db_password: "{{ _gitea_db_password }}"
 gitea_db_ssl: "{{ _gitea_db_ssl }}"
 gitea_db_path: false
 
+# gitea mail
+gitea_mailer_enabled: true
+gitea_mailer_host: 'mail01.l3d.space:465'
+gitea_mailer_from: 'git@backwesen.de'
+gitea_mailer_user: 'git@backwesen.de'
+gitea_mailer_password: "{{ _gitea_mail_password }}"
+
 # gitea other
 gitea_fail2ban_enabled: true
 gitea_metrics_enabled: true
