@@ -22,6 +22,14 @@ users:
     - l3d@derpy.l3d.yt
     - l3d@backup-rsa.l3d.yt
     - l3d@business.wingcon.com
+  wtfpreview:
+    - l3d@pinkie.l3d.yt
+    - l3d@mobile.l3d.yt
+    - l3d@backup.l3d.yt
+    - l3d@derpy.l3d.yt
+    - l3d@backup-rsa.l3d.yt
+    - l3d@business.wingcon.com
+
 
 sshd__allowed_users:
   - "root"
@@ -30,6 +38,7 @@ sshd__allowed_users:
   - "webwaffel"
   - "webwaffelpodcast"
   - "gitea"
+  - "wtfpreview"
 
 sshd__allowed_groups:
   - "root"
@@ -38,11 +47,13 @@ sshd__allowed_groups:
   - "webwaffel"
   - "webwaffelpodcast"
   - "gitea"
+  - "wtfpreview"
 
 accounts:
-  - l3d
-  - webwaffel
-  - webwaffelpodcast
+  - 'l3d'
+  - 'webwaffel'
+  - 'webwaffelpodcast'
+  - 'wtfpreview'
 
 nginx_sites:
   - name: 'c3woc.de'
@@ -95,6 +106,10 @@ nginx_sites:
   - name: 'wtf-kooperative.de'
   - name: 'www.wtf-kooperative.de'
   - name: 'cyber.yt'
+  - name: 'preview.wtf-kooperative.de'
+    webroot:
+      user: 'wtfpreview'
+  - name: 'www.preview.wtf-kooperative.de'
 
 acme_notification_email: "{{ _acme_notification_email }}"
 
