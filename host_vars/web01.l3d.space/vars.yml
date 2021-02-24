@@ -63,6 +63,8 @@ nginx_sites:
   - name: 'waffel.tv'
   - name: 'www.waffel.tv'
   - name: 'c3woc.org'
+  - name: 'waffel.li'
+  - name: 'www.waffel.li'
   - name: 'www.c3woc.org'
   - name: 'c3woc.eu'
   - name: 'www.c3woc.eu'
