@@ -76,9 +76,6 @@
 [submodule "roles/unattended_upgrades"]
 	path = roles/unattended_upgrades
 	url = https://github.com/jnv/ansible-role-unattended-upgrades.git
-[submodule "roles/radicale"]
-	path = roles/radicale
-	url = https://github.com/AnarchoTechNYC/ansible-role-radicale.git
 [submodule "roles/do1jlr.nginx"]
 	path = roles/do1jlr.nginx
 	url = https://github.com/DO1JLR/ansible_role_nginx.git

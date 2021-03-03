@@ -47,4 +47,3 @@
     - {role: do1jlr.dovecot, tags: [mail, dovecot, mailserver_dovecot]}
     - {role: postfix, tags: [mail, postfix]}
     - {role: do1jlr.rspamd, tags: [mail, rspamd]}
-    - {role: radicale, tags: [mail, caldav, radicale]}
