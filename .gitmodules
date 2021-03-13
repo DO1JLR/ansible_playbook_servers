@@ -18,7 +18,7 @@
 	url = https://github.com/chaos-bodensee/role-ssh_authorized_keys.git
 [submodule "roles/sshd"]
 	path = roles/sshd
-	url = https://github.com/chaos-bodensee/role_sshd.git
+	url = https://github.com/roles-ansible/ansible_role_sshd.git
 [submodule "files/ssh_public_keys"]
 	path = files/ssh_public_keys
 	url = https://backwesen.de/ansible/ssh_public_keys.git
