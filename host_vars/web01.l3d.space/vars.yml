@@ -29,7 +29,13 @@ users:
     - l3d@derpy.l3d.yt
     - l3d@backup-rsa.l3d.yt
     - l3d@business.wingcon.com
-
+  files:
+    - l3d@pinkie.l3d.yt
+    - l3d@mobile.l3d.yt
+    - l3d@backup.l3d.yt
+    - l3d@derpy.l3d.yt
+    - l3d@backup-rsa.l3d.yt
+    - l3d@business.wingcon.com
 
 sshd__allowed_users:
   - "root"
@@ -112,6 +118,10 @@ nginx_sites:
     webroot:
       user: 'wtfpreview'
   - name: 'www.preview.wtf-kooperative.de'
+  - name: 'files.l3d.ch'
+    webroot:
+      user: 'files'
+  - name: 'www.files.l3d.ch'
 
 acme_notification_email: "{{ _acme_notification_email }}"
 
