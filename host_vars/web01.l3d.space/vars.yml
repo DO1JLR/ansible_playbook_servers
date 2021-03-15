@@ -45,6 +45,7 @@ sshd__allowed_users:
   - "webwaffelpodcast"
   - "gitea"
   - "wtfpreview"
+  - "files"
 
 sshd__allowed_groups:
   - "root"
@@ -54,12 +55,14 @@ sshd__allowed_groups:
   - "webwaffelpodcast"
   - "gitea"
   - "wtfpreview"
+  - "files"
 
 accounts:
   - 'l3d'
   - 'webwaffel'
   - 'webwaffelpodcast'
   - 'wtfpreview'
+  - "files"
 
 nginx_sites:
   - name: 'c3woc.de'
