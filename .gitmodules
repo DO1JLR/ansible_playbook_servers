@@ -48,7 +48,7 @@
 	url = https://github.com/geerlingguy/ansible-role-mysql.git
 [submodule "roles/gitea"]
 	path = roles/gitea
-	url = https://github.com/thomas-maurice/ansible-role-gitea.git
+	url = https://github.com/roles-ansible/ansible_role_gitea.git
 [submodule "roles/geerlingguy.postgresql"]
 	path = roles/geerlingguy.postgresql
 	url = https://github.com/geerlingguy/ansible-role-postgresql.git
