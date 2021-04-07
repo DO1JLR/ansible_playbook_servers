@@ -77,6 +77,8 @@ nginx_sites:
   - name: 'www.c3woc.org'
   - name: 'c3woc.eu'
   - name: 'www.c3woc.eu'
+  - name: 'c3woc.com'
+  - name: 'www.c3woc.com'
   - name: 'c3woc.cn'
   - name: 'www.c3woc.cn'
   - name: 'waffeln.eskalieren.jetzt'
