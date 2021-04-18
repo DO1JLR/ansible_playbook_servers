@@ -4,7 +4,6 @@
   roles:
     - {role: do1jlr.ansible_version, tags: [default, version, default, always], gather_facts: false}
 
-
 - name: general roles for all hosts
   hosts: all
   roles:
