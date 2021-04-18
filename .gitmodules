@@ -84,4 +84,4 @@
 	url = https://github.com/DO1JLR/ansible_role_acmetool.git
 [submodule "roles/do1jlr.webhost"]
 	path = roles/do1jlr.webhost
-	url = https://github.com/DO1JLR/ansible_role_webhost.git
+	url = https://github.com/roles-ansible/ansible_role_webhost.git
