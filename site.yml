@@ -7,7 +7,7 @@
 - name: general roles for all hosts
   hosts: all
   roles:
-    - {role: base, tags: [default, packages, base]}
+    - {role: do1jlr.base, tags: [default, packages, base]}
     - {role: ranger, tags: [packages, ranger]}
     - {role: bat, tags: [packages, bat], when: [ansible_os_family == 'Debian']}
     - {role: unattended_upgrades, tags: [default, unattended, unattended_upgrades, security], become: true, when: ansible_distribution == 'Debian'}
@@ -30,7 +30,7 @@
     - {role: do1jlr.acmetool, tags: [web, acmetool]}
     - {role: do1jlr.nginx, tags: [web, nginx]}
     - {role: geerlingguy.mysql, tags: [web, git, mysql]}
-    - {role: gitea, tags: [web, gitea, git]}
+    - {role: do1jlr.gitea, tags: [web, gitea, git]}
     - {role: goaccess, tags: [web, goaccess]}
 
 - name: deploy mail config

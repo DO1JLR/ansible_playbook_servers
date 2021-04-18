@@ -1,5 +1,5 @@
 [submodule "roles/base"]
-	path = roles/base
+	path = roles/do1jlr.base
 	url = https://github.com/roles-ansible/ansible_role_base.git
 [submodule "roles/ranger"]
 	path = roles/ranger
@@ -47,7 +47,7 @@
 	path = roles/geerlingguy.mysql
 	url = https://github.com/geerlingguy/ansible-role-mysql.git
 [submodule "roles/gitea"]
-	path = roles/gitea
+	path = roles/do1jlr.gitea
 	url = https://github.com/roles-ansible/ansible_role_gitea.git
 [submodule "roles/geerlingguy.postgresql"]
 	path = roles/geerlingguy.postgresql
