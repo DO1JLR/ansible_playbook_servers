@@ -145,8 +145,6 @@ gitea_protocol: 'http'
 gitea_shell: '/bin/bash'
 gitea_lfs_server_enabled: true
 gitea_lfs_content_path: "{{ gitea_home }}/data/lfs"
-gitea_lfs_jwt_secret: "{{ _gitea_lfs_jwt_secret }}"
-gitea_oauth2_jwt_secret: "{{ _gitea_oauth2_jwt_secret }}"
 gitea_repository_root: "{{ gitea_home }}/repos"
 gitea_ssh_domain: "{{ gitea_http_domain }}"
 gitea_start_ssh: "{{ _gitea_start_ssh }}"
@@ -178,8 +176,6 @@ gitea_repo_indexer_enabled: true
 gitea_enable_notify_mail: true
 
 # gitea secrets
-gitea_secret_key: "{{ _gitea_secret_key }}"
-gitea_internal_token: "{{ _gitea_internal_token }}"
 gitea_disable_git_hooks: "{{ _gitea_disable_git_hooks }}"
 gitea_disable_registration: "{{ _gitea_disable_registration }}"
 gitea_show_registration_button: "{{ _gitea_show_registration_button }}"
