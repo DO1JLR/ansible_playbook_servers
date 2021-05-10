@@ -174,6 +174,10 @@ gitea_metrics_enabled: true
 gitea_metrics_token: "{{ _gitea_metrics_token }}"
 gitea_repo_indexer_enabled: true
 gitea_enable_notify_mail: true
+gitea_extra_config: |
+  [other]
+  SHOW_FOOTER_VERSION = false
+  SHOW_FOOTER_TEMPLATE_LOAD_TIME = false
 
 # gitea secrets
 gitea_disable_git_hooks: "{{ _gitea_disable_git_hooks }}"
