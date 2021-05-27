@@ -7,6 +7,13 @@ users:
     - l3d@derpy.l3d.yt
     - l3d@backup-rsa.l3d.yt
     - l3d@business.wingcon.com
+  weechat:
+    - l3d@pinkie.l3d.yt
+    - l3d@mobile.l3d.yt
+    - l3d@backup.l3d.yt
+    - l3d@derpy.l3d.yt
+    - l3d@backup-rsa.l3d.yt
+    - l3d@business.wingcon.com
   mailwebuser:
     - l3d@pinkie.l3d.yt
     - l3d@mobile.l3d.yt
@@ -18,6 +25,7 @@ users:
 accounts:
   - l3d
   - mailwebuser
+  - weechat
 
 # mail domains
 additional_dns_maildomains: 'mail.l3d.space imap.l3d.space smtp.l3d.space'
@@ -60,6 +68,17 @@ firewall_allowed_tcp_ports:
 # mysql
 mysql_bind_address: "{{ _mysql_bind_address }}"
 mysql_root_password: "{{ _mysql_root_password }}"
+
+# weechat
+weechat__install: true
+weechat__autostart: true
+weechat__user: 'weechat'
+weechat__home_directory: '/home/weechat'
+weechat__install_plugins: true
+weechat__use_custom_config: true
+weechat__custom_private_repo: 'gitea@backwesen.de:l3d/weechat-config.git'
+weechat__custom_gen_ssh_key_pair: true
+weechat__custom_version: 'main'
 
 # postfix
 postfix__myhostname: "{{ mailserver_domain }}"

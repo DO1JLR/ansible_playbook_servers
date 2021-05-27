@@ -85,3 +85,6 @@
 [submodule "roles/do1jlr.webhost"]
 	path = roles/do1jlr.webhost
 	url = https://github.com/roles-ansible/ansible_role_webhost.git
+[submodule "roles/do1jlr.weechat"]
+	path = roles/do1jlr.weechat
+	url = https://github.com/chaos-bodensee/role_weechat.git
