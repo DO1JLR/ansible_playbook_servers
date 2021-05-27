@@ -64,6 +64,7 @@ firewall_allowed_tcp_ports:
   - "587"
   - "993"
   - "4190"
+  - "42023"
 
 # mysql
 mysql_bind_address: "{{ _mysql_bind_address }}"
