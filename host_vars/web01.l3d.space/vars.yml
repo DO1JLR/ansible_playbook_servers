@@ -178,6 +178,8 @@ gitea_extra_config: |
   [other]
   SHOW_FOOTER_VERSION = false
   SHOW_FOOTER_TEMPLATE_LOAD_TIME = false
+gitea_customize_logo: true
+
 
 # gitea secrets
 gitea_disable_git_hooks: "{{ _gitea_disable_git_hooks }}"
