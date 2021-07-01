@@ -48,6 +48,7 @@ nginx_sites:
   - name: 'mail.l3d.space'
     webroot:
       user: 'mailwebuser'
+  - name: "{{ mailserver_domain }}"
 
 # letsencrypt
 acme_notification_email: "{{ _acme_notification_email }}"
