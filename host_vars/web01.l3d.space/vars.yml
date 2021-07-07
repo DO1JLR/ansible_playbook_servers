@@ -37,6 +37,14 @@ users:
     - l3d@backup-rsa.l3d.yt
     - l3d@business.wingcon.com
 
+  preview:
+    - l3d@pinkie.l3d.yt
+    - l3d@mobile.l3d.yt
+    - l3d@backup.l3d.yt
+    - l3d@derpy.l3d.yt
+    - l3d@backup-rsa.l3d.yt
+    - l3d@business.wingcon.com
+
 sshd__allowed_users:
   - "root"
   - "ansible"
@@ -46,6 +54,7 @@ sshd__allowed_users:
   - "gitea"
   - "wtfpreview"
   - "files"
+  - "preview"
 
 sshd__allowed_groups:
   - "root"
@@ -56,6 +65,7 @@ sshd__allowed_groups:
   - "gitea"
   - "wtfpreview"
   - "files"
+  - "preview"
 
 accounts:
   - 'l3d'
@@ -63,6 +73,7 @@ accounts:
   - 'webwaffelpodcast'
   - 'wtfpreview'
   - "files"
+  - "preview"
 
 nginx_sites:
   - name: 'c3woc.de'
@@ -127,6 +138,9 @@ nginx_sites:
     webroot:
       user: 'files'
   - name: 'www.files.l3d.ch'
+  - name: 'preview.c3woc.de'
+    webroot:
+      user: 'preview'
 
 acme_notification_email: "{{ _acme_notification_email }}"
 
