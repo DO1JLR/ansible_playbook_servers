@@ -129,7 +129,6 @@ nginx_sites:
   - name: 'www.c3doc.de'
   - name: 'wtf-kooperative.de'
   - name: 'www.wtf-kooperative.de'
-  - name: 'cyber.yt'
   - name: 'preview.wtf-kooperative.de'
     webroot:
       user: 'wtfpreview'
