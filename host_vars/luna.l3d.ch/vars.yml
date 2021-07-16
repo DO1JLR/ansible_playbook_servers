@@ -1,0 +1,19 @@
+---
+# allow public DNS (in internal network)
+unbound_listen_addresses:
+  - '0.0.0.0@53'
+  - '::0@53'
+unbound_access_control:
+  - 'access-control: 192.168.255.0/24 allow'
+  - 'access-control: fe80::/64 allow'
+  - 'access-control: fd00::/8 allow'
+  - 'access-control: 127.0.0.1 allow'
+  - 'access-control: ::1 allow'
+
+# open firewall for WEB, SSH and DNS
+firewall_allowed_tcp_ports:
+  - "22"
+  - "53"
+  - "80"
+  - "443"
+firewall_allowed_udp_ports: ['53']

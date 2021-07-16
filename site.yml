@@ -33,10 +33,14 @@
     - {role: do1jlr.gitea, tags: [web, gitea, git]}
     - {role: goaccess, tags: [web, goaccess]}
 
+- name: deploy dns resolver
+  hosts: resolver
+  roles:
+    - {role: unbound, tags: [mail, unbound]}
+
 - name: deploy mail config
   hosts: mail
   roles:
-    - {role: unbound, tags: [mail, unbound]}
     - {role: geerlingguy.mysql, tags: [mail, mysql, mariadb], become: true}
     - {role: do1jlr.webhost, tags: [mail, webhost], become: true}
     - {role: acmetool_fix, tags: [mail, acmetool]}
