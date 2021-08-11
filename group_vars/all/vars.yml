@@ -20,3 +20,7 @@ accounts:
 
 # version check for all supported roles
 submodules_versioncheck: true
+
+# do1jlr.base
+base__pkg_contrib: true
+base__pkg_non_free_firmware: true
