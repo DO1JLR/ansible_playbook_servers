@@ -51,3 +51,8 @@
     - {role: postfix, tags: [mail, postfix]}
     - {role: do1jlr.rspamd, tags: [mail, rspamd]}
     - {role: do1jlr.weechat, tags: [irc, weechat]}
+
+- name: setup luna.l3d.ch host
+  hosts: luna.l3d.ch
+  roles: []
+#    - {role: do1jlr.ovh_dyndns, tags: [ovh, dns, dyndns]}
