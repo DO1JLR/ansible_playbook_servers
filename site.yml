@@ -11,6 +11,7 @@
     - {role: ranger, tags: [packages, ranger]}
     - {role: bat, tags: [packages, bat], when: [ansible_os_family == 'Debian']}
     - {role: unattended_upgrades, tags: [default, unattended, unattended_upgrades, security], become: true, when: ansible_distribution == 'Debian'}
+    - {role: do1jlr.rtl_nic_firmware, tags: [apu, rtl_nic, firmware]}
 
 - name: user specific roles for all hosts
   hosts: all
