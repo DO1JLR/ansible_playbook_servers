@@ -16,4 +16,8 @@ firewall_allowed_tcp_ports:
   - "53"
   - "80"
   - "443"
-firewall_allowed_udp_ports: ['53']
+
+# open firewall for DNS and MDNS
+firewall_allowed_udp_ports:
+  - '53'
+  - '5353'

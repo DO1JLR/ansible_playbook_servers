@@ -94,3 +94,6 @@
 [submodule "roles/do1jlr.rtl_nic_firmware"]
 	path = roles/do1jlr.rtl_nic_firmware
 	url = https://github.com/DO1JLR/ansible_role_rtl_nic_firmware.git
+[submodule "roles/do1jlr.avahi_client"]
+	path = roles/do1jlr.avahi_client
+	url = https://github.com/roles-ansible/ansible_role_avahi_client.git
