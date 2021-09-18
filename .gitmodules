@@ -31,9 +31,6 @@
 [submodule "roles/webhost2"]
 	path = roles/webhost2
 	url = git@git.ccczh.ch:ansible-roles/role-webhost.git
-[submodule "roles/goaccess"]
-	path = roles/goaccess
-	url = https://github.com/roles-ansible/ansible_role_goaccess.git
 [submodule "roles/geerlingguy.firewall"]
 	path = roles/geerlingguy.firewall
 	url = https://github.com/geerlingguy/ansible-role-firewall.git

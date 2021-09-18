@@ -33,7 +33,6 @@
     - {role: do1jlr.nginx, tags: [web, nginx]}
     - {role: do1jlr.mysql, tags: [web, git, mysql], become: true}
     - {role: do1jlr.gitea, tags: [web, gitea, git]}
-    - {role: goaccess, tags: [web, goaccess]}
 
 - name: deploy dns resolver
   hosts: resolver
