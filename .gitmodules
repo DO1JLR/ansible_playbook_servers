@@ -94,3 +94,6 @@
 [submodule "roles/do1jlr.mysql"]
 	path = roles/do1jlr.mysql
 	url = https://github.com/roles-ansible/ansible_role_mysql.git
+[submodule "roles/do1jlr.admin_base"]
+	path = roles/do1jlr.admin_base
+	url = https://github.com/roles-ansible/ansible_admin_base_role.git
