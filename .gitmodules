@@ -9,13 +9,13 @@
 	url = https://github.com/gantsign/ansible_role_bat.git
 [submodule "roles/dotfiles"]
 	path = roles/dotfiles
-	url = https://github.com/chaos-bodensee/role_dotfiles.git
+	url = https://github.com/roles-ansible/ansible_role_dotfiles.git
 [submodule "roles/users"]
 	path = roles/users
-	url = https://github.com/chaos-bodensee/role-manage_users.git
+	url = https://github.com/roles-ansible/ansible_role_users.git
 [submodule "roles/ssh_auth"]
 	path = roles/ssh_auth
-	url = https://github.com/chaos-bodensee/role-ssh_authorized_keys.git
+	url = https://github.com/roles-ansible/ansible_role_auth.git
 [submodule "roles/sshd"]
 	path = roles/sshd
 	url = https://github.com/roles-ansible/ansible_role_sshd.git
@@ -48,10 +48,10 @@
 	url = https://github.com/geerlingguy/ansible-role-postgresql.git
 [submodule "roles/postfix"]
 	path = roles/postfix
-	url = https://github.com/DO1JLR/ansible_roler_postfix.git
+	url = https://github.com/DO1JLR/ansible_role_postfix.git
 [submodule "roles/do1jlr.ansible_version"]
 	path = roles/do1jlr.ansible_version
-	url = https://github.com/roles-ansible/role_ansible-version.git
+	url = https://github.com/roles-ansible/ansible_role_versioncheck.git
 [submodule "roles/do1jlr.mailserver_preperation"]
 	path = roles/do1jlr.mailserver_preperation
 	url = https://github.com/DO1JLR/ansible_role_mailserver_preperations.git
@@ -81,7 +81,7 @@
 	url = https://github.com/roles-ansible/ansible_role_webhost.git
 [submodule "roles/do1jlr.weechat"]
 	path = roles/do1jlr.weechat
-	url = https://github.com/chaos-bodensee/role_weechat.git
+	url = https://github.com/roles-ansible/ansible_role_weechat.git
 [submodule "roles/do1jlr.ovh_dyndns"]
 	path = roles/do1jlr.ovh_dyndns
 	url = https://github.com/DO1JLR/ansible_role_ovh_dyndns.git
