@@ -11,13 +11,13 @@
 	path = roles/dotfiles
 	url = https://github.com/roles-ansible/ansible_role_dotfiles.git
 [submodule "roles/users"]
-	path = roles/users
+	path = roles/do1jlr.users
 	url = https://github.com/roles-ansible/ansible_role_users.git
 [submodule "roles/ssh_auth"]
-	path = roles/ssh_auth
+	path = roles/do1jlr.auth
 	url = https://github.com/roles-ansible/ansible_role_auth.git
 [submodule "roles/sshd"]
-	path = roles/sshd
+	path = roles/do1jlr.sshd
 	url = https://github.com/roles-ansible/ansible_role_sshd.git
 [submodule "files/ssh_public_keys"]
 	path = files/ssh_public_keys

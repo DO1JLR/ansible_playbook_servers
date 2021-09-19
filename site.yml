@@ -17,10 +17,10 @@
 - name: user specific roles for all hosts
   hosts: all
   roles:
-    - {role: users, tags: [default, init, users, web]}
+    - {role: do1jlr.users, tags: [default, init, users, web]}
     - {role: dotfiles, tags: [default, dotfiles]}
-    - {role: ssh_auth, tags: [default, init, users, web]}
-    - {role: sshd, tags: [default, init, users, sshd]}
+    - {role: do1jlr.auth, tags: [default, init, users, web]}
+    - {role: do1jlr.sshd, tags: [default, init, users, sshd]}
     - {role: geerlingguy.firewall, tags: [default, firewall], become: true}
     - {role: robertdebock.fail2ban, tags: [default, fail2ban], become: true}
 
