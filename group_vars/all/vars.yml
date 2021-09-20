@@ -1,22 +1,5 @@
 ---
-check_ansible_version: '2.11.1'
-
-admins:
-  - l3d
-
-users:
-  l3d:
-    - l3d@pinkie.l3d.yt
-    - l3d@mobile.l3d.yt
-    - l3d@backup.l3d.yt
-    - l3d@derpy.l3d.yt
-    - l3d@backup-rsa.l3d.yt
-    - l3d@business.wingcon.com
-
-#    https://github.com/do1jlr.keys
-
-accounts:
-  - l3d
+check_ansible_version: '2.11.5'
 
 # version check for all supported roles
 submodules_versioncheck: true
