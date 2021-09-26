@@ -13,6 +13,7 @@
     - {role: unattended_upgrades, tags: [default, unattended, unattended_upgrades, security], become: true, when: ansible_distribution == 'Debian'}
     - {role: do1jlr.rtl_nic_firmware, tags: [apu, rtl_nic, firmware]}
     - {role: do1jlr.avahi_client, tags: [avahi, avahi_client]}
+    - {role: do1jlr.ntp, tags: [ntp]}
 
 - name: user specific roles for all hosts
   hosts: all
