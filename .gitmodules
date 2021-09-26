@@ -97,3 +97,6 @@
 [submodule "roles/do1jlr.admin_base"]
 	path = roles/do1jlr.admin_base
 	url = https://github.com/roles-ansible/ansible_admin_base_role.git
+[submodule "roles/do1jlr.ntp"]
+	path = roles/do1jlr.ntp
+	url = https://github.com/roles-ansible/ansible_role_ntp.git
