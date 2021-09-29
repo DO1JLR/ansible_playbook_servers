@@ -62,7 +62,7 @@
 	path = roles/acmetool_fix
 	url = https://github.com/DO1JLR/ansible_role_acmetool_debian_fix.git
 [submodule "roles/unbound"]
-	path = roles/unbound
+	path = roles/do1jlr.unbound
 	url = https://github.com/roles-ansible/ansible_role_unbound.git
 [submodule "roles/do1jlr.rspamd"]
 	path = roles/do1jlr.rspamd

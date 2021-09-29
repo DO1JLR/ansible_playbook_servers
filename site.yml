@@ -36,7 +36,7 @@
 - name: deploy dns resolver
   hosts: resolver
   roles:
-    - {role: unbound, tags: [mail, unbound]}
+    - {role: do1jlr.unbound, tags: [mail, unbound]}
 
 - name: deploy mail config
   hosts: mail

@@ -1,8 +1,9 @@
 ---
 # allow public DNS (in internal network)
 unbound_listen_addresses:
-  - '0.0.0.0@53'
   - '::0@53'
+  - '0.0.0.0@53'
+
 unbound_access_control:
   - 'access-control: 192.168.255.0/24 allow'
   - 'access-control: fe80::/64 allow'
