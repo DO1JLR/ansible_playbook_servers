@@ -22,13 +22,6 @@ users:
     - l3d@derpy.l3d.yt
     - l3d@backup-rsa.l3d.yt
     - l3d@business.wingcon.com
-  wtfpreview:
-    - l3d@pinkie.l3d.yt
-    - l3d@mobile.l3d.yt
-    - l3d@backup.l3d.yt
-    - l3d@derpy.l3d.yt
-    - l3d@backup-rsa.l3d.yt
-    - l3d@business.wingcon.com
   files:
     - l3d@pinkie.l3d.yt
     - l3d@mobile.l3d.yt
@@ -129,10 +122,6 @@ nginx_sites:
   - name: 'www.c3doc.de'
   - name: 'wtf-kooperative.de'
   - name: 'www.wtf-kooperative.de'
-  - name: 'preview.wtf-kooperative.de'
-    webroot:
-      user: 'wtfpreview'
-  - name: 'www.preview.wtf-kooperative.de'
   - name: 'files.l3d.ch'
     webroot:
       user: 'files'
