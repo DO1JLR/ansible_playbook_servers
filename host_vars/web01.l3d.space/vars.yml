@@ -129,6 +129,8 @@ nginx_sites:
   - name: 'preview.c3woc.de'
     webroot:
       user: 'preview'
+  - name: 'waffelpate.de'
+  - name: 'www.waffelpate.de'
 
 acme_notification_email: "{{ _acme_notification_email }}"
 
