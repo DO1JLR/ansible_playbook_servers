@@ -45,7 +45,6 @@ sshd__allowed_users:
   - "webwaffel"
   - "webwaffelpodcast"
   - "gitea"
-  - "wtfpreview"
   - "files"
   - "preview"
 
@@ -56,7 +55,6 @@ sshd__allowed_groups:
   - "webwaffel"
   - "webwaffelpodcast"
   - "gitea"
-  - "wtfpreview"
   - "files"
   - "preview"
 
@@ -64,9 +62,10 @@ accounts:
   - 'l3d'
   - 'webwaffel'
   - 'webwaffelpodcast'
-  - 'wtfpreview'
   - "files"
   - "preview"
+
+acme_domain_unwant_list: []
 
 nginx_sites:
   - name: 'c3woc.de'
@@ -120,8 +119,6 @@ nginx_sites:
   - name: 'www.c3nom.de'
   - name: 'c3doc.de'
   - name: 'www.c3doc.de'
-  - name: 'wtf-kooperative.de'
-  - name: 'www.wtf-kooperative.de'
   - name: 'files.l3d.ch'
     webroot:
       user: 'files'
