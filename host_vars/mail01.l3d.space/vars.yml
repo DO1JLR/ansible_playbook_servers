@@ -86,3 +86,16 @@ weechat__custom_version: 'main'
 postfix__myhostname: "{{ mailserver_domain }}"
 postfix__tls_cert: "{{ mailserver__ssl_cert }}"
 postfix__tls_key: "{{ mailserver__ssl_key }}"
+
+# fail2ban
+fail2ban_jail_configuration:
+  - option: 'enabled'
+    value: 'true'
+    section: 'postfix'
+  - option: 'mode'
+    value: 'extra'
+    section: 'postfix'
+  - option: 'enabled'
+    value: 'true'
+    section: 'dovecot'
+
