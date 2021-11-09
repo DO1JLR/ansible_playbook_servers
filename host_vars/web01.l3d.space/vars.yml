@@ -29,8 +29,14 @@ users:
     - l3d@derpy.l3d.yt
     - l3d@backup-rsa.l3d.yt
     - l3d@business.wingcon.com
-
   preview:
+    - l3d@pinkie.l3d.yt
+    - l3d@mobile.l3d.yt
+    - l3d@backup.l3d.yt
+    - l3d@derpy.l3d.yt
+    - l3d@backup-rsa.l3d.yt
+    - l3d@business.wingcon.com
+  see:
     - l3d@pinkie.l3d.yt
     - l3d@mobile.l3d.yt
     - l3d@backup.l3d.yt
@@ -47,6 +53,7 @@ sshd__allowed_users:
   - "gitea"
   - "files"
   - "preview"
+  - 'see'
 
 sshd__allowed_groups:
   - "root"
@@ -57,6 +64,7 @@ sshd__allowed_groups:
   - "gitea"
   - "files"
   - "preview"
+  - 'see'
 
 accounts:
   - 'l3d'
@@ -64,6 +72,7 @@ accounts:
   - 'webwaffelpodcast'
   - "files"
   - "preview"
+  - 'see'
 
 acme_domain_unwant_list: []
 
@@ -129,6 +138,8 @@ nginx_sites:
   - name: 'waffelpate.de'
   - name: 'www.waffelpate.de'
   - name: 'xn--see-br-0xa.se'
+    webroot:
+      user: 'see'
   - name: 'www.xn--see-br-0xa.se'
 
 acme_notification_email: "{{ _acme_notification_email }}"
