@@ -1,48 +1,41 @@
 ---
 postgres_users_no_log: false
-users:
-  l3d:
-    - l3d@pinkie.l3d.yt
-    - l3d@mobile.l3d.yt
-    - l3d@backup.l3d.yt
-    - l3d@derpy.l3d.yt
-    - l3d@backup-rsa.l3d.yt
-    - l3d@business.wingcon.com
+local_users:
   webwaffel:
     - l3d@pinkie.l3d.yt
     - l3d@mobile.l3d.yt
     - l3d@backup.l3d.yt
     - l3d@derpy.l3d.yt
     - l3d@backup-rsa.l3d.yt
-    - l3d@business.wingcon.com
+    - l3d@bsns.l3d
   webwaffelpodcast:
     - l3d@pinkie.l3d.yt
     - l3d@mobile.l3d.yt
     - l3d@backup.l3d.yt
     - l3d@derpy.l3d.yt
     - l3d@backup-rsa.l3d.yt
-    - l3d@business.wingcon.com
+    - l3d@bsns.l3d
   files:
     - l3d@pinkie.l3d.yt
     - l3d@mobile.l3d.yt
     - l3d@backup.l3d.yt
     - l3d@derpy.l3d.yt
     - l3d@backup-rsa.l3d.yt
-    - l3d@business.wingcon.com
+    - l3d@bsns.l3d
   preview:
     - l3d@pinkie.l3d.yt
     - l3d@mobile.l3d.yt
     - l3d@backup.l3d.yt
     - l3d@derpy.l3d.yt
     - l3d@backup-rsa.l3d.yt
-    - l3d@business.wingcon.com
+    - l3d@bsns.l3d
   see:
     - l3d@pinkie.l3d.yt
     - l3d@mobile.l3d.yt
     - l3d@backup.l3d.yt
     - l3d@derpy.l3d.yt
     - l3d@backup-rsa.l3d.yt
-    - l3d@business.wingcon.com
+    - l3d@bsns.l3d
 
 sshd__allowed_users:
   - "root"
@@ -66,12 +59,12 @@ sshd__allowed_groups:
   - "preview"
   - 'see'
 
-accounts:
+local_accounts:
   - 'l3d'
   - 'webwaffel'
   - 'webwaffelpodcast'
-  - "files"
-  - "preview"
+  - 'files'
+  - 'preview'
   - 'see'
 
 acme_domain_unwant_list: []
