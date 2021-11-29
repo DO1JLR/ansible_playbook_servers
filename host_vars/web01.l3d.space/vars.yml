@@ -134,6 +134,8 @@ nginx_sites:
     webroot:
       user: 'see'
   - name: 'www.xn--see-br-0xa.se'
+  - name: 'thelaend.xn--see-br-0xa.se'
+  - name: 'www.thelaend.xn--see-br-0xa.se'
 
 acme_notification_email: "{{ _acme_notification_email }}"
 
