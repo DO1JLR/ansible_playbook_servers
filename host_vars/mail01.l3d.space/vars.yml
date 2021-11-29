@@ -99,3 +99,4 @@ fail2ban_jail_configuration:
     value: 'true'
     section: 'dovecot'
 
+nginx__infrastructure_domain__enabled: false
