@@ -1,5 +1,5 @@
 ---
-check_ansible_version: '2.11.5'
+check_ansible_version: '2.12.1'
 
 # version check for all supported roles
 submodules_versioncheck: true
