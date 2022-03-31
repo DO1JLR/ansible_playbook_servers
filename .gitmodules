@@ -79,9 +79,6 @@
 [submodule "roles/do1jlr.weechat"]
 	path = roles/do1jlr.weechat
 	url = https://github.com/roles-ansible/ansible_role_weechat.git
-[submodule "roles/do1jlr.ovh_dyndns"]
-	path = roles/do1jlr.ovh_dyndns
-	url = https://github.com/DO1JLR/ansible_role_ovh_dyndns.git
 [submodule "roles/do1jlr.rtl_nic_firmware"]
 	path = roles/do1jlr.rtl_nic_firmware
 	url = https://github.com/DO1JLR/ansible_role_rtl_nic_firmware.git

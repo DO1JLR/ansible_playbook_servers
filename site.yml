@@ -53,4 +53,3 @@
 - name: setup luna.l3d.ch host
   hosts: luna.l3d.ch
   roles: []
-#    - {role: do1jlr.ovh_dyndns, tags: [ovh, dns, dyndns]}
