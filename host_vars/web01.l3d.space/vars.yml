@@ -43,6 +43,13 @@ local_users:
     - l3d@derpy.l3d.yt
     - l3d@backup-rsa.l3d.yt
     - l3d@bsns.l3d
+  m2:
+    - l3d@pinkie.l3d.yt
+    - l3d@mobile.l3d.yt
+    - l3d@backup.l3d.yt
+    - l3d@derpy.l3d.yt
+    - l3d@backup-rsa.l3d.yt
+    - l3d@bsns.l3d
 
 sshd__allowed_users:
   - "root"
@@ -55,6 +62,7 @@ sshd__allowed_users:
   - "preview"
   - 'see'
   - 'winkekatze'
+  - 'm2'
 
 sshd__allowed_groups:
   - "root"
@@ -67,6 +75,7 @@ sshd__allowed_groups:
   - "preview"
   - 'see'
   - 'winkekatze'
+  - 'm2'
 
 local_accounts:
   - 'l3d'
@@ -76,6 +85,7 @@ local_accounts:
   - 'preview'
   - 'see'
   - 'winkekatze'
+  - 'm2'
 
 acme_domain_unwant_list: []
 
@@ -150,6 +160,9 @@ nginx_sites:
     webroot:
       user: 'winkekatze'
   - name: 'www.winkekatze.tv'
+  - name: 'm2.xn--see-br-0xa.se'
+    webroot:
+      user: 'm2'
 
 acme_notification_email: "{{ _acme_notification_email }}"
 
