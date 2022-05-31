@@ -2,13 +2,13 @@
 	path = roles/do1jlr.base
 	url = https://github.com/roles-ansible/ansible_role_base.git
 [submodule "roles/ranger"]
-	path = roles/ranger
+	path = roles/do1jlr.ranger
 	url = https://github.com/roles-ansible/ansible_role_ranger.git
 [submodule "roles/bat"]
-	path = roles/bat
+	path = roles/gantsign.bat
 	url = https://github.com/gantsign/ansible_role_bat.git
 [submodule "roles/dotfiles"]
-	path = roles/dotfiles
+	path = roles/do1jlr.dotfiles
 	url = https://github.com/roles-ansible/ansible_role_dotfiles.git
 [submodule "roles/users"]
 	path = roles/do1jlr.users
@@ -22,15 +22,6 @@
 [submodule "files/ssh_public_keys"]
 	path = files/ssh_public_keys
 	url = https://backwesen.de/ansible/ssh_public_keys.git
-[submodule "roles/nginx2"]
-	path = roles/nginx2
-	url = git@git.ccczh.ch:ansible-roles/role-nginx_new2.git
-[submodule "roles/acmetool2"]
-	path = roles/acmetool2
-	url = git@git.ccczh.ch:ansible-roles/role-acmetool.git
-[submodule "roles/webhost2"]
-	path = roles/webhost2
-	url = git@git.ccczh.ch:ansible-roles/role-webhost.git
 [submodule "roles/geerlingguy.firewall"]
 	path = roles/geerlingguy.firewall
 	url = https://github.com/geerlingguy/ansible-role-firewall.git
