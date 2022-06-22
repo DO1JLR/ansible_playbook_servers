@@ -50,6 +50,13 @@ local_users:
     - l3d@derpy.l3d.yt
     - l3d@backup-rsa.l3d.yt
     - l3d@bsns.l3d
+  klima:
+    - l3d@pinkie.l3d.yt
+    - l3d@mobile.l3d.yt
+    - l3d@backup.l3d.yt
+    - l3d@derpy.l3d.yt
+    - l3d@backup-rsa.l3d.yt
+    - l3d@bsns.l3d
 
 sshd__allowed_users:
   - "root"
@@ -63,6 +70,7 @@ sshd__allowed_users:
   - 'see'
   - 'winkekatze'
   - 'm2'
+  - 'klima'
 
 sshd__allowed_groups:
   - "root"
@@ -76,6 +84,7 @@ sshd__allowed_groups:
   - 'see'
   - 'winkekatze'
   - 'm2'
+  - 'klima'
 
 local_accounts:
   - 'l3d'
@@ -86,8 +95,10 @@ local_accounts:
   - 'see'
   - 'winkekatze'
   - 'm2'
+  - 'klima'
 
 acme_domain_unwant_list: []
+#  - name: 'example.com'
 
 nginx_sites:
   - name: 'c3woc.de'
@@ -139,8 +150,6 @@ nginx_sites:
   - name: 'www.backwesen.de'
   - name: 'c3nom.de'
   - name: 'www.c3nom.de'
-  - name: 'c3doc.de'
-  - name: 'www.c3doc.de'
   - name: 'files.l3d.ch'
     webroot:
       user: 'files'
@@ -163,6 +172,10 @@ nginx_sites:
   - name: 'm2.xn--see-br-0xa.se'
     webroot:
       user: 'm2'
+  - name: 'klima-streik.de'
+    webroot:
+      user: 'klima'
+  - name: 'www.klima-streik.de'
 
 acme_notification_email: "{{ _acme_notification_email }}"
 
