@@ -138,8 +138,6 @@ nginx_sites:
   - name: 'www.podcast.c3woc.de'
   - name: 'podcast.c3woc.org'
   - name: 'www.podcast.c3woc.org'
-  - name: 'podcast.c3vvoc.de'
-  - name: 'www.podcast.c3vvoc.de'
   - name: 'podcast.c3woc.eu'
   - name: 'www.podcast.c3woc.eu'
   - name: 'angel.systems'
