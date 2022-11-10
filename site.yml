@@ -37,6 +37,11 @@
   roles:
     - {role: do1jlr.unbound, tags: [mail, unbound]}
 
+- name: Deploy services
+  hosts: services
+  roles:
+    - {role: do1jlr.etebase, tags: [etebase, etesync, calendar, kalender, contacts, kontakte]}
+
 - name: Deploy mail config
   hosts: mail
   roles:
