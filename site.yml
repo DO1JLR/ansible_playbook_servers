@@ -23,12 +23,17 @@
     - {role: geerlingguy.firewall, tags: [default, firewall], become: true}
     - {role: robertdebock.fail2ban, tags: [default, fail2ban], become: true}
 
-- name: Deploy web config
-  hosts: web
+- name: Setup Webserver
+  hosts: nginx
   roles:
     - {role: do1jlr.webhost, tags: [web, webhost], become: true}
     - {role: do1jlr.acmetool, tags: [web, acmetool], become: true}
     - {role: do1jlr.nginx, tags: [web, nginx]}
+
+
+- name: Deploy web config
+  hosts: web
+  roles:
     - {role: do1jlr.mysql, tags: [web, git, mysql], become: true}
     - {role: do1jlr.gitea, tags: [web, gitea, git]}
 
@@ -46,9 +51,6 @@
   hosts: mail
   roles:
     - {role: do1jlr.mysql, tags: [mail, mysql, mariadb], become: true}
-    - {role: do1jlr.webhost, tags: [mail, webhost], become: true}
-    - {role: do1jlr.acmetool, tags: [mail, acmetool], become: true}
-    - {role: do1jlr.nginx, tags: [mail, nginx]}
     - {role: do1jlr.mailserver_preperation, tags: [mail, mailserver_preperation, prep, mailserver]}
     - {role: do1jlr.dovecot, tags: [mail, dovecot, mailserver_dovecot]}
     - {role: postfix, tags: [mail, postfix]}
