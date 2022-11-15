@@ -85,3 +85,6 @@
 [submodule "roles/do1jlr.ntp"]
 	path = roles/do1jlr.ntp
 	url = https://github.com/roles-ansible/ansible_role_ntp.git
+[submodule "roles/do1jlr.etebase"]
+	path = roles/do1jlr.etebase
+	url = https://github.com/roles-ansible/ansible_role_etebase.git
