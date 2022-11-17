@@ -1,9 +1,19 @@
 ---
-check_ansible_version: '2.12.1'
-
 # version check for all supported roles
 submodules_versioncheck: true
 
 # do1jlr.base
 base__pkg_contrib: true
 base__pkg_non_free_firmware: true
+
+# do1jlr.ntp
+ntp_set_time_zone: true
+ntp_servers:
+  - ntp3.hetzner.de iburst
+  - ntp2.hetzner.de iburst
+  - ntp1.hetzner.de iburst
+  - ptbtime1.ptb.de
+  - ptbtime3.ptb.de
+  - 1.pool.ntp.org iburst
+  - 2.pool.ntp.org iburst
+  - 3.pool.ntp.org iburst

@@ -14,6 +14,8 @@ firewall_allowed_tcp_ports:
   - "80"
   - "443"
 
+# do1jlr.etebase
 etebase__allowed_hosts_allowed_host1: 'etebase.l3d.ch'
 etebase__restart_webserver: true
 etebase__systemd_setup: true
+etebase__create_backup: true
