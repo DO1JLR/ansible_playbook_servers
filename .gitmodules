@@ -1,90 +1,120 @@
 [submodule "roles/base"]
 	path = roles/do1jlr.base
 	url = https://github.com/roles-ansible/ansible_role_base.git
+  branch = main
 [submodule "roles/ranger"]
 	path = roles/do1jlr.ranger
 	url = https://github.com/roles-ansible/ansible_role_ranger.git
+  branch = main
 [submodule "roles/bat"]
 	path = roles/gantsign.bat
 	url = https://github.com/gantsign/ansible_role_bat.git
+  branch = master
 [submodule "roles/dotfiles"]
 	path = roles/do1jlr.dotfiles
 	url = https://github.com/roles-ansible/ansible_role_dotfiles.git
+  branch = main
 [submodule "roles/users"]
 	path = roles/do1jlr.users
 	url = https://github.com/roles-ansible/ansible_role_users.git
+  branch = main
 [submodule "roles/ssh_auth"]
 	path = roles/do1jlr.auth
 	url = https://github.com/roles-ansible/ansible_role_auth.git
+  branch = main
 [submodule "roles/sshd"]
 	path = roles/do1jlr.sshd
 	url = https://github.com/roles-ansible/ansible_role_sshd.git
+  branch = main
 [submodule "files/ssh_public_keys"]
 	path = files/ssh_public_keys
 	url = https://backwesen.de/ansible/ssh_public_keys.git
+  branch = main
 [submodule "roles/geerlingguy.firewall"]
 	path = roles/geerlingguy.firewall
 	url = https://github.com/geerlingguy/ansible-role-firewall.git
+  branch = master
 [submodule "roles/robertdebock.fail2ban"]
 	path = roles/robertdebock.fail2ban
 	url = https://github.com/robertdebock/ansible-role-fail2ban.git
+  branch = master
 [submodule "roles/robertdebock.dovecot"]
 	path = roles/robertdebock.dovecot
 	url = https://github.com/robertdebock/ansible-role-dovecot.git
+  branch = master
 [submodule "roles/gitea"]
 	path = roles/do1jlr.gitea
 	url = https://github.com/roles-ansible/ansible_role_gitea.git
+  branch = main
 [submodule "roles/geerlingguy.postgresql"]
 	path = roles/geerlingguy.postgresql
 	url = https://github.com/geerlingguy/ansible-role-postgresql.git
+  branch = master
 [submodule "roles/postfix"]
 	path = roles/postfix
 	url = https://github.com/DO1JLR/ansible_role_postfix.git
+  branch = main
 [submodule "roles/do1jlr.ansible_version"]
 	path = roles/do1jlr.ansible_version
 	url = https://github.com/roles-ansible/ansible_role_versioncheck.git
+  branch = main
 [submodule "roles/do1jlr.mailserver_preperation"]
 	path = roles/do1jlr.mailserver_preperation
 	url = https://github.com/DO1JLR/ansible_role_mailserver_preperations.git
+  branch = main
 [submodule "roles/do1jlr.dovecot"]
 	path = roles/do1jlr.dovecot
 	url = https://github.com/DO1JLR/ansible_role_dovecot.git
+  branch = main
 [submodule "roles/unbound"]
 	path = roles/do1jlr.unbound
 	url = https://github.com/roles-ansible/ansible_role_unbound.git
+  branch = main
 [submodule "roles/do1jlr.rspamd"]
 	path = roles/do1jlr.rspamd
 	url = https://github.com/roles-ansible/ansible_role_rspamd.git
+  branch = main
 [submodule "roles/unattended_upgrades"]
 	path = roles/unattended_upgrades
 	url = https://github.com/jnv/ansible-role-unattended-upgrades.git
+  branch = master
 [submodule "roles/do1jlr.nginx"]
 	path = roles/do1jlr.nginx
 	url = https://github.com/DO1JLR/ansible_role_nginx.git
+  branch = main
 [submodule "roles/do1jlr.acmetool"]
 	path = roles/do1jlr.acmetool
 	url = https://github.com/DO1JLR/ansible_role_acmetool.git
+  branch = master
 [submodule "roles/do1jlr.webhost"]
 	path = roles/do1jlr.webhost
 	url = https://github.com/roles-ansible/ansible_role_webhost.git
+  branch = master
 [submodule "roles/do1jlr.weechat"]
 	path = roles/do1jlr.weechat
 	url = https://github.com/roles-ansible/ansible_role_weechat.git
+  branch = master
 [submodule "roles/do1jlr.rtl_nic_firmware"]
 	path = roles/do1jlr.rtl_nic_firmware
 	url = https://github.com/DO1JLR/ansible_role_rtl_nic_firmware.git
+  branch = master
 [submodule "roles/do1jlr.avahi_client"]
 	path = roles/do1jlr.avahi_client
 	url = https://github.com/roles-ansible/ansible_role_avahi_client.git
+  branch = master
 [submodule "roles/do1jlr.mysql"]
 	path = roles/do1jlr.mysql
 	url = https://github.com/roles-ansible/ansible_role_mysql.git
+  branch = master
 [submodule "roles/do1jlr.admin_base"]
 	path = roles/do1jlr.admin_base
 	url = https://github.com/roles-ansible/ansible_admin_base_role.git
+  branch = master
 [submodule "roles/do1jlr.ntp"]
 	path = roles/do1jlr.ntp
 	url = https://github.com/roles-ansible/ansible_role_ntp.git
+  branch = master
 [submodule "roles/do1jlr.etebase"]
 	path = roles/do1jlr.etebase
 	url = https://github.com/roles-ansible/ansible_role_etebase.git
+  branch = master
