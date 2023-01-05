@@ -1,6 +1,7 @@
 ---
 # version check for all supported roles
 submodules_versioncheck: true
+check_ansible_version: '2.14.1'
 
 # do1jlr.base
 base__pkg_contrib: true
