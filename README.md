@@ -18,6 +18,11 @@ git config submodule.recurse true
 git submodule update --init --recursive
 ```
 
+### Git Vault diff
+```
+git config --global diff.ansible-vault.textconv "ansible-vault view"
+```
+
 ### Standard Playbook
 Das standard Playook ist ``site.yml``. Womöglich sind hier andere Playbooks eingebunden...
 
