@@ -210,10 +210,18 @@ gitea_db_path: false
 
 # gitea mail
 gitea_mailer_enabled: true
-gitea_mailer_host: 'mail01.l3d.space:465'
-gitea_mailer_from: 'git@backwesen.de'
+gitea_mailer_protocol: 'smtp+starttls'
+gitea_mailer_smtp_addr: 'mail01.l3d.space'
+gitea_mailer_smtp_port: '143'
 gitea_mailer_user: 'git@backwesen.de'
 gitea_mailer_password: "{{ _gitea_mail_password }}"
+gitea_mailer_from: 'git@backwesen.de'
+gitea_subject_prefix: 'backwesen'
+gitea_mailer_host: 'mail01.l3d.space:465'
+
+# federation
+gitea_federation_enabled: true
+gitea_federation_share_user_stats: true
 
 # gitea other
 gitea_fail2ban_enabled: true
@@ -221,10 +229,8 @@ gitea_metrics_enabled: true
 gitea_metrics_token: "{{ _gitea_metrics_token }}"
 gitea_repo_indexer_enabled: true
 gitea_enable_notify_mail: true
-gitea_extra_config: |
-  [other]
-  SHOW_FOOTER_VERSION = false
-  SHOW_FOOTER_TEMPLATE_LOAD_TIME = false
+gitea_other_show_footer_version: false
+gitea_other_show_footer_template_load_time: false
 gitea_customize_logo: true
 gitea_customize_footer: true
 
