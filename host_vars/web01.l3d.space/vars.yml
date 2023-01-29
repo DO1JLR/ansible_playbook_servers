@@ -210,9 +210,9 @@ gitea_db_path: false
 
 # gitea mail
 gitea_mailer_enabled: true
-gitea_mailer_protocol: 'smtp+starttls'
+gitea_mailer_protocol: 'smtps'
 gitea_mailer_smtp_addr: 'mail01.l3d.space'
-gitea_mailer_smtp_port: '143'
+gitea_mailer_smtp_port: '465'
 gitea_mailer_user: 'git@backwesen.de'
 gitea_mailer_password: "{{ _gitea_mail_password }}"
 gitea_mailer_from: 'git@backwesen.de'
@@ -233,6 +233,7 @@ gitea_other_show_footer_version: false
 gitea_other_show_footer_template_load_time: false
 gitea_customize_logo: true
 gitea_customize_footer: true
+gitea_enable_cors: true
 
 # gitea secrets
 gitea_disable_git_hooks: "{{ _gitea_disable_git_hooks }}"
