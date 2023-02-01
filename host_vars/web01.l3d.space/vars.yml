@@ -232,6 +232,9 @@ gitea_other_show_footer_template_load_time: false
 gitea_customize_logo: true
 gitea_customize_footer: true
 gitea_enable_cors: true
+gitea_default_repo_units: 'repo.code,repo.releases,repo.pulls'
+gitea_disabled_repo_units: 'repo.wiki,repo.ext_wiki,repo.projects'
+gitea_enable_push_create_user: true
 
 # gitea secrets
 gitea_disable_git_hooks: "{{ _gitea_disable_git_hooks }}"
