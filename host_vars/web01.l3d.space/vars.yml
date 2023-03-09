@@ -57,6 +57,13 @@ local_users:
     - l3d@derpy.l3d.yt
     - l3d@backup-rsa.l3d.yt
     - l3d@bsns.l3d
+  roles:
+    - l3d@pinkie.l3d.yt
+    - l3d@mobile.l3d.yt
+    - l3d@backup.l3d.yt
+    - l3d@derpy.l3d.yt
+    - l3d@backup-rsa.l3d.yt
+    - l3d@bsns.l3d
 
 sshd__allowed_users:
   - "root"
@@ -71,6 +78,7 @@ sshd__allowed_users:
   - 'winkekatze'
   - 'm2'
   - 'klima'
+  - 'roles'
 
 sshd__allowed_groups:
   - "root"
@@ -85,6 +93,7 @@ sshd__allowed_groups:
   - 'winkekatze'
   - 'm2'
   - 'klima'
+  - 'roles'
 
 local_accounts:
   - 'l3d'
@@ -96,6 +105,7 @@ local_accounts:
   - 'winkekatze'
   - 'm2'
   - 'klima'
+  - 'roles'
 
 acme_domain_unwant_list: []
 #  - name: 'example.com'
@@ -125,6 +135,8 @@ nginx_sites:
   - name: 'l3d.space'
   - name: 'www.l3d.space'
   - name: 'ansible.l3d.space'
+    webroot:
+      user: 'roles'
   - name: 'www.ansible.l3d.space'
   - name: 'l3d.yt'
   - name: 'www.l3d.yt'
