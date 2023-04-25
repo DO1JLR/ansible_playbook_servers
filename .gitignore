@@ -23,3 +23,4 @@ tags
 *.retry
 *.vault
 .vault
+ansible/

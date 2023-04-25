@@ -14,3 +14,4 @@ ignore: |
   host_vars/services.l3d.space/vault.yml
   group_vars/all/vault.yml
   roles/
+  ansible/

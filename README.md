@@ -25,5 +25,3 @@ git config --global diff.ansible-vault.textconv "ansible-vault view"
 
 ### Standard Playbook
 Das standard Playook ist ``site.yml``. Womöglich sind hier andere Playbooks eingebunden...
-
-### best practise Ansible-Vault:
