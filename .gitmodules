@@ -118,3 +118,12 @@
 	path = roles/do1jlr.etebase
 	url = https://github.com/roles-ansible/ansible_role_etebase.git
   branch = master
+[submodule "collections/ansible_collections/community/mysql"]
+	path = collections/ansible_collections/community/mysql
+	url = https://github.com/ansible-collections/community.mysql.git
+[submodule "collections/ansible_collections/community/general"]
+	path = collections/ansible_collections/community/general
+	url = https://github.com/ansible-collections/community.general.git
+[submodule "collections/ansible_collections/community/crypto"]
+	path = collections/ansible_collections/community/crypto
+	url = https://github.com/ansible-collections/community.crypto.git
