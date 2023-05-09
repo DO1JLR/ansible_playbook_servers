@@ -208,6 +208,8 @@ gitea_start_ssh: "{{ _gitea_start_ssh }}"
 gitea_ssh_port: 22
 gitea_require_signin: false
 gitea_password_check_pwn: true
+gitea_actions_enabled: true
+gitea_actions_default_actions_url: 'https://backwesen.de/'
 
 # gitea db
 gitea_db_type: mysql
