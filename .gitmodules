@@ -42,10 +42,6 @@
 	path = roles/robertdebock.dovecot
 	url = https://github.com/robertdebock/ansible-role-dovecot.git
   branch = master
-[submodule "roles/gitea"]
-	path = roles/do1jlr.gitea
-	url = https://github.com/roles-ansible/ansible_role_gitea.git
-  branch = main
 [submodule "roles/geerlingguy.postgresql"]
 	path = roles/geerlingguy.postgresql
 	url = https://github.com/geerlingguy/ansible-role-postgresql.git
@@ -127,3 +123,6 @@
 [submodule "collections/ansible_collections/community/crypto"]
 	path = collections/ansible_collections/community/crypto
 	url = https://github.com/ansible-collections/community.crypto.git
+[submodule "collections/ansible_collections/l3d/git"]
+	path = collections/ansible_collections/l3d/git
+	url = https://github.com/roles-ansible/ansible_collection_git.git

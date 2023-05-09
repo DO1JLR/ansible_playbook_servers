@@ -35,7 +35,7 @@
   hosts: web
   roles:
     - {role: do1jlr.mysql, tags: [web, git, mysql], become: true}
-    - {role: do1jlr.gitea, tags: [web, gitea, git]}
+    - {role: l3d.git.gitea, tags: [web, gitea, git]}
 
 - name: Deploy dns resolver
   hosts: resolver
