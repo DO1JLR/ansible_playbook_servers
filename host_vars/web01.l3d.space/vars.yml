@@ -249,6 +249,9 @@ gitea_enable_cors: true
 gitea_default_repo_units: 'repo.code,repo.releases,repo.pulls'
 gitea_disabled_repo_units: 'repo.wiki,repo.ext_wiki,repo.projects'
 gitea_enable_push_create_user: true
+gitea_repository_upload_max_size: 30
+gitea_attachment_types: '*/*'
+gitea_attachment_max_size: 35
 
 # gitea secrets
 gitea_disable_git_hooks: "{{ _gitea_disable_git_hooks }}"
