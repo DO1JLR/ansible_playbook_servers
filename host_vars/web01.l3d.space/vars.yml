@@ -165,9 +165,6 @@ nginx_sites:
       user: 'preview'
   - name: 'waffelpate.de'
   - name: 'www.waffelpate.de'
-  - name: 'see-base.de'
-    webroot:
-      user: 'see'
   - name: 'www.see-base.de'
   - name: 'xn--see-br-0xa.se'
     webroot:
