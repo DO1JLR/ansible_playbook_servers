@@ -123,8 +123,6 @@ nginx_sites:
   - name: 'www.c3woc.org'
   - name: 'c3woc.eu'
   - name: 'www.c3woc.eu'
-  - name: 'c3woc.com'
-  - name: 'www.c3woc.com'
   - name: 'c3woc.cn'
   - name: 'www.c3woc.cn'
   - name: 'waffeln.eskalieren.jetzt'
@@ -156,6 +154,8 @@ nginx_sites:
   - name: 'www.einhornsystem.de'
   - name: 'backwesen.de'
   - name: 'www.backwesen.de'
+  - name: 'git.l3d.ch'
+  - name: 'www.git.l3d.ch'
   - name: 'files.l3d.ch'
     webroot:
       user: 'files'
@@ -165,7 +165,6 @@ nginx_sites:
       user: 'preview'
   - name: 'waffelpate.de'
   - name: 'www.waffelpate.de'
-  - name: 'www.see-base.de'
   - name: 'xn--see-br-0xa.se'
     webroot:
       user: 'see'
@@ -194,9 +193,9 @@ firewall_allowed_tcp_ports:
   - "443"
 
 # gitea settings
-gitea_app_name: 'backwesen.de'
-gitea_http_domain: 'backwesen.de'
-gitea_root_url: 'https://backwesen.de'
+gitea_app_name: 'git.l3d.ch'
+gitea_http_domain: 'git.l3d.ch'
+gitea_root_url: 'https://git.l3d.ch'
 gitea_protocol: 'http'
 gitea_shell: '/bin/bash'
 gitea_lfs_server_enabled: true
@@ -208,7 +207,7 @@ gitea_ssh_port: 22
 gitea_require_signin: false
 gitea_password_check_pwn: true
 gitea_actions_enabled: true
-gitea_actions_default_actions_url: 'https://backwesen.de/'
+gitea_actions_default_actions_url: 'https://git.l3d.ch/'
 
 # gitea db
 gitea_db_type: mysql
@@ -224,10 +223,10 @@ gitea_mailer_enabled: true
 gitea_mailer_protocol: 'smtps'
 gitea_mailer_smtp_addr: 'mail01.l3d.space'
 gitea_mailer_smtp_port: '465'
-gitea_mailer_user: 'git@backwesen.de'
+gitea_mailer_user: 'git@l3d.ch'
 gitea_mailer_password: "{{ _gitea_mail_password }}"
-gitea_mailer_from: 'git@backwesen.de'
-gitea_subject_prefix: 'backwesen'
+gitea_mailer_from: 'git@l3d.ch'
+gitea_subject_prefix: 'git'
 gitea_mailer_host: 'mail01.l3d.space:465'
 
 # federation

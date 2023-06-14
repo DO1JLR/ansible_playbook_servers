@@ -28,7 +28,7 @@
   branch = main
 [submodule "files/ssh_public_keys"]
 	path = files/ssh_public_keys
-	url = https://backwesen.de/ansible/ssh_public_keys.git
+	url = https://git.l3d.ch/ansible/ssh_public_keys.git
   branch = main
 [submodule "roles/geerlingguy.firewall"]
 	path = roles/geerlingguy.firewall
@@ -98,10 +98,6 @@
 	path = roles/do1jlr.avahi_client
 	url = https://github.com/roles-ansible/ansible_role_avahi_client.git
   branch = master
-[submodule "roles/do1jlr.mysql"]
-	path = roles/do1jlr.mysql
-	url = https://github.com/roles-ansible/ansible_role_mysql.git
-  branch = master
 [submodule "roles/do1jlr.admin_base"]
 	path = roles/do1jlr.admin_base
 	url = https://github.com/roles-ansible/ansible_admin_base_role.git
@@ -129,3 +125,6 @@
 [submodule "collections/ansible_collections/ansible/posix"]
 	path = collections/ansible_collections/ansible/posix
 	url = https://github.com/ansible-collections/ansible.posix.git
+[submodule "roles/geerlingguy.mysql"]
+	path = roles/geerlingguy.mysql
+	url = https://github.com/geerlingguy/ansible-role-mysql.git

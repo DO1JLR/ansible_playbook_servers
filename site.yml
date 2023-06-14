@@ -34,7 +34,7 @@
 - name: Deploy web config
   hosts: web
   roles:
-    - {role: do1jlr.mysql, tags: [web, git, mysql], become: true}
+    # - {role: geerlingguy.mysql, tags: [web, git, mysql], become: true}
     - {role: l3d.git.gitea, tags: [web, gitea, git]}
 
 - name: Deploy dns resolver
@@ -50,7 +50,7 @@
 - name: Deploy mail config
   hosts: mail
   roles:
-    - {role: do1jlr.mysql, tags: [mail, mysql, mariadb], become: true}
+    # - {role: do1jlr.mysql, tags: [mail, mysql, mariadb], become: true}
     - {role: do1jlr.mailserver_preperation, tags: [mail, mailserver_preperation, prep, mailserver]}
     - {role: do1jlr.dovecot, tags: [mail, dovecot, mailserver_dovecot]}
     - {role: postfix, tags: [mail, postfix]}

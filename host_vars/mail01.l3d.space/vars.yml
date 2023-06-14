@@ -78,7 +78,7 @@ weechat__user: 'weechat'
 weechat__home_directory: '/home/weechat'
 weechat__install_plugins: true
 weechat__use_custom_config: true
-weechat__custom_private_repo: 'gitea@backwesen.de:l3d/weechat-config.git'
+weechat__custom_private_repo: 'gitea@git.l3d.ch:l3d/weechat-config.git'
 weechat__custom_gen_ssh_key_pair: true
 weechat__custom_version: 'main'
 
