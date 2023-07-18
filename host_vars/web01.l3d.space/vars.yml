@@ -120,6 +120,7 @@ nginx_sites:
   - name: 'c3woc.org'
   - name: 'waffel.li'
   - name: 'www.waffel.li'
+  - name: 'www.camp.waffel.li'
   - name: 'www.c3woc.org'
   - name: 'c3woc.eu'
   - name: 'www.c3woc.eu'
@@ -175,9 +176,6 @@ nginx_sites:
     webroot:
       user: 'winkekatze'
   - name: 'www.winkekatze.tv'
-  - name: 'm2.xn--see-br-0xa.se'
-    webroot:
-      user: 'm2'
   - name: 'klima-streik.de'
     webroot:
       user: 'klima'
