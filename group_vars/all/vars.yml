@@ -1,11 +1,11 @@
 ---
 # version check for all supported roles
 submodules_versioncheck: true
-check_ansible_version: '2.14.1'
+check_ansible_version: '2.15.2'
 
-# do1jlr.base
-base__pkg_contrib: true
-base__pkg_non_free_firmware: true
+# l3d.packages
+l3d_pkgs__install_advanced: true
+l3d_pkgs__install_cli: true
 
 # do1jlr.ntp
 ntp_set_time_zone: true
