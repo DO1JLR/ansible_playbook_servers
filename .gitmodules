@@ -125,5 +125,5 @@
 	path = roles/geerlingguy.mysql
 	url = https://github.com/geerlingguy/ansible-role-mysql.git
 [submodule "roles/do1jlr.packages"]
-	path = roles/do1jlr.packages
+	path = roles/l3d.packages
 	url = https://github.com/roles-ansible/ansible_role_packages.git
