@@ -205,7 +205,7 @@ gitea_ssh_port: 22
 gitea_require_signin: false
 gitea_password_check_pwn: true
 gitea_actions_enabled: true
-gitea_actions_default_actions_url: 'https://git.l3d.ch/'
+gitea_actions_default_actions_url: 'self'
 
 # gitea db
 gitea_db_type: mysql
