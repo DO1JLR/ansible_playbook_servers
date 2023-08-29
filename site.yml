@@ -7,7 +7,7 @@
 - name: General roles for all hosts
   hosts: all
   roles:
-    - {role: do1jlr.base, tags: [default, packages, base]}
+    - {role: l3d.packages, tags: [packages, general]}
     - {role: do1jlr.ranger, tags: [packages, ranger]}
     - {role: gantsign.bat, tags: [packages, bat], when: [ansible_os_family == 'Debian']}
     - {role: unattended_upgrades, tags: [default, unattended, unattended_upgrades, security], become: true, when: ansible_distribution == 'Debian'}
