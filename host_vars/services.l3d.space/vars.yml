@@ -23,4 +23,3 @@ etebase__create_backup: true
 # acmetool config
 acme_reload_services:
   - 'nginx'
-
