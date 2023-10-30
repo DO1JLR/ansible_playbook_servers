@@ -107,6 +107,13 @@ local_accounts:
   - 'klima'
   - 'roles'
 
+# acmetool config
+acme_reload_services:
+  - 'nginx'
+
+acme_restart_services:
+  - 'gitea'
+
 acme_domain_unwant_list: []
 #  - name: 'example.com'
 

@@ -53,6 +53,16 @@ nginx_sites:
 # letsencrypt
 acme_notification_email: "{{ _acme_notification_email }}"
 
+# acmetool config
+acme_reload_services:
+  - 'nginx'
+
+acme_restart_services:
+  - 'rspamd'
+  - 'dovecot'
+  - 'unbound'
+  - 'redis-server'
+
 # firewall
 fail2ban_destemail: "{{ _fail2ban_destemail }}"
 firewall_allowed_tcp_ports:

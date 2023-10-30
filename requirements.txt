@@ -1,1 +1,2 @@
-jmespath
+jmespath>=1.0.1
+passlib[bcrypt]>=1.7.4
