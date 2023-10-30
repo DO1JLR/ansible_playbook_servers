@@ -19,6 +19,5 @@ jobs:
       - name: Run ansible-lint
         uses: ansible-actions/ansible-lint-action@v1.0.2
         with:
-          target: "site.yml"
+          target: "./"
           python_dependency_file: 'requirements.txt'
-          collections_yml: 'requirements.yml'
