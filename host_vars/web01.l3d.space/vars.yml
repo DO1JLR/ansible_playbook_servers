@@ -181,6 +181,10 @@ nginx_sites:
   - name: 'www.xn--see-br-0xa.se'
   - name: 'thelaend.xn--see-br-0xa.se'
   - name: 'www.thelaend.xn--see-br-0xa.se'
+  - name: 'aalen-geekend-23.winkekatze.tv'
+    webroot:
+      user: 'winkekatze'
+  - name: 'www.aalen-geekend-23.winkekatze.tv'
   - name: 'winkekatze.tv'
     webroot:
       user: 'winkekatze'
