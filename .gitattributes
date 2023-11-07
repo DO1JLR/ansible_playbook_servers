@@ -1,3 +1,2 @@
 *.png filter=lfs diff=lfs merge=lfs -text
 **/vault.yml diff=ansible-vault merge=binary
-**/vault.yml diff=ansible-vault merge=binary

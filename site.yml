@@ -47,6 +47,7 @@
   hosts: services
   roles:
     - {role: do1jlr.etebase, tags: [etebase, etesync, calendar, kalender, contacts, kontakte]}
+    - {role: grafana.grafana.grafana, tags: [grafana. monitoring]}
 
 - name: Deploy mail config
   hosts: mail
