@@ -66,10 +66,6 @@
 	path = roles/do1jlr.rspamd
 	url = https://github.com/roles-ansible/ansible_role_rspamd.git
   branch = main
-[submodule "roles/unattended_upgrades"]
-	path = roles/unattended_upgrades
-	url = https://github.com/jnv/ansible-role-unattended-upgrades.git
-  branch = master
 [submodule "roles/do1jlr.nginx"]
 	path = roles/do1jlr.nginx
 	url = https://github.com/DO1JLR/ansible_role_nginx.git
@@ -109,9 +105,6 @@
 [submodule "collections/ansible_collections/community/mysql"]
 	path = collections/ansible_collections/community/mysql
 	url = https://github.com/ansible-collections/community.mysql.git
-[submodule "collections/ansible_collections/community/general"]
-	path = collections/ansible_collections/community/general
-	url = https://github.com/ansible-collections/community.general.git
 [submodule "collections/ansible_collections/community/crypto"]
 	path = collections/ansible_collections/community/crypto
 	url = https://github.com/ansible-collections/community.crypto.git
@@ -127,3 +120,18 @@
 [submodule "roles/do1jlr.packages"]
 	path = roles/l3d.packages
 	url = https://github.com/roles-ansible/ansible_role_packages.git
+[submodule "collections/ansible_collections/prometheus/prometheus"]
+	path = collections/ansible_collections/prometheus/prometheus
+	url = https://github.com/prometheus-community/ansible
+[submodule "collections/ansible_collections/community/grafana"]
+	path = collections/ansible_collections/community/grafana
+	url = https://github.com/ansible-collections/community.grafana
+[submodule "collections/ansible_collections/grafana/grafana"]
+	path = collections/ansible_collections/grafana/grafana
+	url = https://github.com/grafana/grafana-ansible-collection
+[submodule "roles/unattended_upgrades"]
+	path = roles/unattended_upgrades
+	url = https://github.com/hifis-net/ansible-role-unattended-upgrades.git
+[submodule "collections/ansible_collections/community/general"]
+	path = collections/ansible_collections/community/general
+	url = https://github.com/ansible-collections/community.general.git

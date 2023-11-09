@@ -14,6 +14,7 @@
     - {role: do1jlr.rtl_nic_firmware, tags: [apu, rtl_nic, firmware]}
     - {role: do1jlr.avahi_client, tags: [avahi, avahi_client]}
     - {role: do1jlr.ntp, tags: [ntp]}
+    - {role: prometheus.prometheus.node_exporter, tags: [monitoring, node_exporter]}
 
 - name: User specific roles for all hosts
   hosts: all
@@ -46,6 +47,7 @@
   hosts: services
   roles:
     - {role: do1jlr.etebase, tags: [etebase, etesync, calendar, kalender, contacts, kontakte]}
+    - {role: grafana.grafana.grafana, tags: [grafana. monitoring]}
 
 - name: Deploy mail config
   hosts: mail
