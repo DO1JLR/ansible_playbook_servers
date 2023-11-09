@@ -25,3 +25,7 @@ etebase__create_backup: true
 # acmetool config
 acme_reload_services:
   - 'nginx'
+
+# grafana.grafana-grafana
+grafana_address: '127.0.0.1'
+grafana_instance: 'grafana.l3d.ch'
