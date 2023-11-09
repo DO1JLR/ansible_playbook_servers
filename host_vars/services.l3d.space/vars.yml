@@ -4,6 +4,8 @@ acme_domain_unwant_list: []
 
 nginx_sites:
   - name: 'etebase.l3d.ch'
+  - name: 'grafana.l3d.ch'
+  - name: 'www.grafana.l3d.ch'
 
 acme_notification_email: "{{ _acme_notification_email }}"
 
