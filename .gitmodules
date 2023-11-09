@@ -105,9 +105,6 @@
 [submodule "collections/ansible_collections/community/mysql"]
 	path = collections/ansible_collections/community/mysql
 	url = https://github.com/ansible-collections/community.mysql.git
-[submodule "collections/ansible_collections/community/general"]
-	path = collections/ansible_collections/community/general
-	url = https://github.com/ansible-collections/community.general.git
 [submodule "collections/ansible_collections/community/crypto"]
 	path = collections/ansible_collections/community/crypto
 	url = https://github.com/ansible-collections/community.crypto.git
@@ -135,3 +132,6 @@
 [submodule "roles/unattended_upgrades"]
 	path = roles/unattended_upgrades
 	url = https://github.com/hifis-net/ansible-role-unattended-upgrades.git
+[submodule "collections/ansible_collections/community/general"]
+	path = collections/ansible_collections/community/general
+	url = https://github.com/ansible-collections/community.general.git
