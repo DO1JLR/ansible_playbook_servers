@@ -29,3 +29,8 @@ acme_reload_services:
 # grafana.grafana-grafana
 grafana_address: '127.0.0.1'
 grafana_instance: 'grafana.l3d.ch'
+grafana_users:
+  allow_sign_up: false
+  auto_assign_org_role: Viewer
+  default_theme: dark
+

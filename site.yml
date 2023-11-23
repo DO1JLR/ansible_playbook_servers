@@ -48,6 +48,7 @@
   roles:
     - {role: do1jlr.etebase, tags: [etebase, etesync, calendar, kalender, contacts, kontakte]}
     - {role: grafana.grafana.grafana, tags: [grafana. monitoring]}
+    - {role: prometheus.prometheus.prometheus, tags: [monitoring, prometheus]}
 
 - name: Deploy mail config
   hosts: mail

@@ -8,10 +8,26 @@ server {
   include snippets/tls_certificate_{{ site.name }}.snippet.conf;
   include snippets/logging_{{ site.name }}.snippet.conf;
 
-  root /srv/www/c3woc.de;
 
   location / {
     charset utf-8;
-    try_files $uri $uri/ =404;
+    proxy_pass http://localhost:9100;
+    client_max_body_size 256M;
+    proxy_read_timeout 3600;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    allow 127.0.0.1;  #  allow requests from localhost
+    allow ::1;  #  allow requests from localhost
+    allow {{ prometheus_v4 }};  # allow prometheus IPv4
+    allow {{ prometheus_v6 }};  # allow prometheus IPv6
+    deny all;   # deny all other hosts
   }
+  location /nginx_status {
+    stub_status;
+    allow 127.0.0.1;  # allow requests from localhost
+    allow ::1;  # allow requests from localhost
+    allow {{ prometheus_v4 }};  # allow prometheus IPv4
+    allow {{ prometheus_v6 }};  # allow prometheus IPv6
+    deny all;   # deny all other hosts
+ }
 }
