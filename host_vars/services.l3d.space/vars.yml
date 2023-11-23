@@ -33,3 +33,8 @@ grafana_users:
   allow_sign_up: false
   auto_assign_org_role: Viewer
   default_theme: dark
+
+grafana_dashboards:
+  - dashboard_id: '1860'
+    revision_id: '33'
+    datasource: '{{ grafana_datasources.0.name }}'
