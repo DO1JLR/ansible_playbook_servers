@@ -33,4 +33,3 @@ grafana_users:
   allow_sign_up: false
   auto_assign_org_role: Viewer
   default_theme: dark
-
