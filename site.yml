@@ -25,7 +25,7 @@
     - {role: robertdebock.fail2ban, tags: [default, fail2ban], become: true}
 
 - name: Setup Webserver
-  hosts: nginx
+  hosts: all
   roles:
     - {role: do1jlr.webhost, tags: [web, webhost], become: true}
     - {role: do1jlr.acmetool, tags: [web, acmetool], become: true}
