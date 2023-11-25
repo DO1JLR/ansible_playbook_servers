@@ -44,11 +44,16 @@ postfix__db_user: "{{ _mailserver__mysql_user }}"
 postfix__db_password: "{{ _mailserver__mysql_password }}"
 postfix__db_name: "{{ _mailserver__mysql_database }}"
 
+acme_domain_unwant_list: []
+#  - name: 'example.com'
+
 nginx_sites:
   - name: 'mail.l3d.space'
     webroot:
       user: 'mailwebuser'
   - name: "{{ mailserver_domain }}"
+  - name: 'node-exporter.mail01.l3d.space'
+  - name: 'nginx-exporter.mail01.l3d.space'
 
 # letsencrypt
 acme_notification_email: "{{ _acme_notification_email }}"
@@ -110,3 +115,7 @@ fail2ban_jail_configuration:
     section: 'dovecot'
 
 nginx__infrastructure_domain__enabled: false
+
+# l3d.nginx_exporter
+nginx_exporter_listen_address: '127.0.0.1:9113'
+nginx_exporter_scrape_uri: 'https://node-exporter.mail01.l3d.space/nginx_status'

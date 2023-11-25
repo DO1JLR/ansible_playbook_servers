@@ -25,11 +25,12 @@
     - {role: robertdebock.fail2ban, tags: [default, fail2ban], become: true}
 
 - name: Setup Webserver
-  hosts: nginx
+  hosts: all
   roles:
     - {role: do1jlr.webhost, tags: [web, webhost], become: true}
     - {role: do1jlr.acmetool, tags: [web, acmetool], become: true}
     - {role: do1jlr.nginx, tags: [web, nginx]}
+    - {role: l3d.nginx_exporter, tags: [monitoring, nginx, prometheus, exporter]}
 
 
 - name: Deploy web config
@@ -48,6 +49,7 @@
   roles:
     - {role: do1jlr.etebase, tags: [etebase, etesync, calendar, kalender, contacts, kontakte]}
     - {role: grafana.grafana.grafana, tags: [grafana. monitoring]}
+    - {role: prometheus.prometheus.prometheus, tags: [monitoring, prometheus]}
 
 - name: Deploy mail config
   hosts: mail

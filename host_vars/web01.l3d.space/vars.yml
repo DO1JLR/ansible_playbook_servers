@@ -193,6 +193,8 @@ nginx_sites:
     webroot:
       user: 'klima'
   - name: 'www.klima-streik.de'
+  - name: 'node-exporter.web01.l3d.space'
+  - name: 'nginx-exporter.web01.l3d.space'
 
 acme_notification_email: "{{ _acme_notification_email }}"
 
@@ -266,3 +268,7 @@ gitea_attachment_max_size: 35
 gitea_disable_git_hooks: "{{ _gitea_disable_git_hooks }}"
 gitea_disable_registration: "{{ _gitea_disable_registration }}"
 gitea_show_registration_button: "{{ _gitea_show_registration_button }}"
+
+# l3d.nginx_exporter
+nginx_exporter_listen_address: '127.0.0.1:9113'
+nginx_exporter_scrape_uri: 'https://node-exporter.web01.l3d.space/nginx_status'
