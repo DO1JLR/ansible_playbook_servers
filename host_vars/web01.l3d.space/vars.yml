@@ -271,4 +271,4 @@ gitea_show_registration_button: "{{ _gitea_show_registration_button }}"
 
 # l3d.nginx_exporter
 nginx_exporter_listen_address: '127.0.0.1:9113'
-nginx_exporter_scrape_uri: 'https://node-exporter.web01.l3d.space/stub_status'
+nginx_exporter_scrape_uri: 'https://node-exporter.web01.l3d.space/nginx_status'
