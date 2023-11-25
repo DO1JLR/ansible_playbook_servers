@@ -44,8 +44,7 @@ postfix__db_user: "{{ _mailserver__mysql_user }}"
 postfix__db_password: "{{ _mailserver__mysql_password }}"
 postfix__db_name: "{{ _mailserver__mysql_database }}"
 
-acme_domain_unwant_list:
-  - name: 'node_exporter.imail01.l3d.space'
+acme_domain_unwant_list: []
 #  - name: 'example.com'
 
 nginx_sites:
@@ -54,6 +53,7 @@ nginx_sites:
       user: 'mailwebuser'
   - name: "{{ mailserver_domain }}"
   - name: 'node-exporter.mail01.l3d.space'
+  - name: 'nginx-exporter.mail01.l3d.space'
 
 # letsencrypt
 acme_notification_email: "{{ _acme_notification_email }}"

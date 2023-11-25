@@ -135,3 +135,6 @@
 [submodule "collections/ansible_collections/community/general"]
 	path = collections/ansible_collections/community/general
 	url = https://github.com/ansible-collections/community.general.git
+[submodule "roles/l3d.nginx_exporter"]
+	path = roles/l3d.nginx_exporter
+	url = https://github.com/roles-ansible/ansible_role_nginx_exporter

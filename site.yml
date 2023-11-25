@@ -30,6 +30,7 @@
     - {role: do1jlr.webhost, tags: [web, webhost], become: true}
     - {role: do1jlr.acmetool, tags: [web, acmetool], become: true}
     - {role: do1jlr.nginx, tags: [web, nginx]}
+    - {role: l3d.nginx_exporter, tags: [monitoring, nginx, prometheus, exporter]}
 
 
 - name: Deploy web config

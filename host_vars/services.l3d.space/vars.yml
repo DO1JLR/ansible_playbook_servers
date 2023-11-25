@@ -1,6 +1,5 @@
 ---
-acme_domain_unwant_list:
-  - name: 'node_exporter.services.l3d.space'
+acme_domain_unwant_list: []
 #  - name: 'example.com'
 
 nginx_sites:
@@ -8,6 +7,7 @@ nginx_sites:
   - name: 'grafana.l3d.ch'
   - name: 'www.grafana.l3d.ch'
   - name: 'node-exporter.services.l3d.space'
+  - name: 'nginx-exporter.services.l3d.space'
 
 acme_notification_email: "{{ _acme_notification_email }}"
 
@@ -39,6 +39,9 @@ grafana_users:
 grafana_dashboards:
   - dashboard_id: '1860'
     revision_id: '33'
+    datasource: '{{ grafana_datasources.0.name }}'
+  - dashboard_id: '12708'
+    revision_id: '1'
     datasource: '{{ grafana_datasources.0.name }}'
 
 # l3d.nginx_exporter

@@ -114,8 +114,7 @@ acme_reload_services:
 acme_restart_services:
   - 'gitea'
 
-acme_domain_unwant_list:
-  - name: 'node_exporter.web01.l3d.space'
+acme_domain_unwant_list: []
 #  - name: 'example.com'
 
 nginx_sites:
@@ -195,6 +194,7 @@ nginx_sites:
       user: 'klima'
   - name: 'www.klima-streik.de'
   - name: 'node-exporter.web01.l3d.space'
+  - name: 'nginx-exporter.web01.l3d.space'
 
 acme_notification_email: "{{ _acme_notification_email }}"
 
