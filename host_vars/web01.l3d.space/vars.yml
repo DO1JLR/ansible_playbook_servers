@@ -114,7 +114,9 @@ acme_reload_services:
 acme_restart_services:
   - 'gitea'
 
-acme_domain_unwant_list: []
+acme_domain_unwant_list:
+  - name: 'backwesen.de'
+  - name: 'www.backwesen.de'
 #  - name: 'example.com'
 
 nginx_sites:
@@ -162,8 +164,6 @@ nginx_sites:
   - name: 'www.angel.systems'
   - name: 'einhornsystem.de'
   - name: 'www.einhornsystem.de'
-  - name: 'backwesen.de'
-  - name: 'www.backwesen.de'
   - name: 'git.l3d.ch'
   - name: 'www.git.l3d.ch'
   - name: 'files.l3d.ch'
