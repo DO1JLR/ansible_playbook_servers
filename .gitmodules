@@ -122,13 +122,13 @@
 	url = https://github.com/roles-ansible/ansible_role_packages.git
 [submodule "collections/ansible_collections/prometheus/prometheus"]
 	path = collections/ansible_collections/prometheus/prometheus
-	url = https://github.com/prometheus-community/ansible
+	url = https://github.com/prometheus-community/ansible.git
 [submodule "collections/ansible_collections/community/grafana"]
 	path = collections/ansible_collections/community/grafana
-	url = https://github.com/ansible-collections/community.grafana
+	url = https://github.com/ansible-collections/community.grafana.git
 [submodule "collections/ansible_collections/grafana/grafana"]
 	path = collections/ansible_collections/grafana/grafana
-	url = https://github.com/grafana/grafana-ansible-collection
+	url = https://github.com/grafana/grafana-ansible-collection.git
 [submodule "roles/unattended_upgrades"]
 	path = roles/unattended_upgrades
 	url = https://github.com/hifis-net/ansible-role-unattended-upgrades.git
@@ -137,4 +137,7 @@
 	url = https://github.com/ansible-collections/community.general.git
 [submodule "roles/l3d.nginx_exporter"]
 	path = roles/l3d.nginx_exporter
-	url = https://github.com/roles-ansible/ansible_role_nginx_exporter
+	url = https://github.com/roles-ansible/ansible_role_nginx_exporter.git
+[submodule "collections/ansible_collections/l3d/time"]
+	path = collections/ansible_collections/l3d/time
+	url = https://github.com/roles-ansible/ansible_collection_time.git
