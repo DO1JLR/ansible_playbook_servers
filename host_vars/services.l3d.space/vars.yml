@@ -44,6 +44,10 @@ grafana_dashboards:
     revision_id: '1'
     datasource: '{{ grafana_datasources.0.name }}'
 
+# l3d.homebox
+homebox__env_options_allow_registration: false
+homebox__env_web_host: '127.0.0.1'
+
 # l3d.nginx_exporter
 nginx_exporter_listen_address: '127.0.0.1:9113'
 nginx_exporter_scrape_uri: 'https://node-exporter.services.l3d.space/nginx_status'
