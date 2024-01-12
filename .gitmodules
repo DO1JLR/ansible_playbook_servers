@@ -141,3 +141,6 @@
 [submodule "collections/ansible_collections/l3d/time"]
 	path = collections/ansible_collections/l3d/time
 	url = https://github.com/roles-ansible/ansible_collection_time.git
+[submodule "roles/l3d.homebox"]
+	path = roles/l3d.homebox
+	url = https://github.com/roles-ansible/ansible_role_homebox.git
