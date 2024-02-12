@@ -1,0 +1,60 @@
+---
+users:
+  l3d:
+    - l3d@pinkie.l3d.yt
+    - l3d@mobile.l3d.yt
+    - l3d@backup.l3d.yt
+    - l3d@derpy.l3d.yt
+    - l3d@backup-rsa.l3d.yt
+    - l3d@business.wingcon.com
+  mxusr:
+    - l3d@pinkie.l3d.yt
+    - l3d@mobile.l3d.yt
+    - l3d@backup.l3d.yt
+    - l3d@derpy.l3d.yt
+    - l3d@backup-rsa.l3d.yt
+    - l3d@business.wingcon.com
+
+accounts:
+  - l3d
+  - mxusr
+
+acme_domain_unwant_list: []
+#  - name: 'example.com'
+
+nginx_sites:
+  - name: 'mx.l3d.space'
+    webroot:
+      user: 'mxusr'
+  - name: 'node-exporter.mx.l3d.space'
+  - name: 'nginx-exporter.mx.l3d.space'
+
+# letsencrypt
+acme_notification_email: "{{ _acme_notification_email }}"
+
+# acmetool config
+acme_reload_services:
+  - 'nginx'
+
+# firewall
+fail2ban_destemail: "{{ _fail2ban_destemail }}"
+firewall_allowed_tcp_ports:
+  - "22"
+#  - "25"
+  - "80"
+#  - "143"
+  - "443"
+#  - "465"
+#  - "587"
+#  - "993"
+#  - "4190"
+#  - "42023"
+
+nginx__infrastructure_domain__enabled: false
+
+# l3d.time.ntp
+ntp_statistics: true
+
+# l3d.nginx_exporter
+nginx_exporter_listen_address: '127.0.0.1:9113'
+nginx_exporter_scrape_uri: 'https://node-exporter.mx.l3d.ch/nginx_status'
