@@ -21,3 +21,8 @@ ntp_servers:
 
 # prometheus.prometeus.node_exporter
 node_exporter_web_listen_address: '127.0.0.1:9100'
+
+# do1jlr.users
+admins:
+  - l3d
+  - ansible

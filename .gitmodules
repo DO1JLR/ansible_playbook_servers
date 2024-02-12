@@ -99,7 +99,7 @@
 	url = https://github.com/roles-ansible/ansible_role_ntp.git
   branch = master
 [submodule "roles/do1jlr.etebase"]
-	path = roles/do1jlr.etebase
+	path = roles/l3d.etebase
 	url = https://github.com/roles-ansible/ansible_role_etebase.git
   branch = master
 [submodule "collections/ansible_collections/community/mysql"]
