@@ -144,3 +144,6 @@
 [submodule "roles/l3d.homebox"]
 	path = roles/l3d.homebox
 	url = https://github.com/roles-ansible/ansible_role_homebox.git
+[submodule "collections/ansible_collections/l3d/users"]
+	path = collections/ansible_collections/l3d/users
+	url = https://github.com/ansible-actions/ansible_collection_users.git
