@@ -7,6 +7,7 @@
 - name: General roles for all hosts
   hosts: all
   roles:
+    - {role: l3d.users.user, tags: [usr]}
     - {role: l3d.packages, tags: [packages, general]}
     - {role: do1jlr.ranger, tags: [packages, ranger]}
     - {role: gantsign.bat, tags: [packages, bat], when: [ansible_os_family == 'Debian']}

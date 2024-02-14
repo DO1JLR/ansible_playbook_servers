@@ -22,6 +22,25 @@ ntp_servers:
 # prometheus.prometeus.node_exporter
 node_exporter_web_listen_address: '127.0.0.1:9100'
 
+# l3d.users
+l3d_users__default_users:
+  - name: 'l3d'
+    state: 'present'
+    shell: '/bin/bash'
+    create_home: true
+    admin: true
+    pubkeys: |
+       ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPvvXN33GwkTF4ZOwPgF21Un4R2z9hWUuQt1qIfzQyhC
+       ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAG65EdcM+JLv0gnzT9LcqVU47Pkw0SqiIg7XipXENi8
+       ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJz7zEvUVgJJJsIgfG3izsqYcM22IaKz4jGVUbNRL2PX
+  - name: 'alice'
+    state: 'absent'
+    remove: true
+
+# l3d.users.user
+l3d_users_user__create_ansible: true
+l3d_users_user__set_ansible_ssh_keys: true
+
 # do1jlr.users
 admins:
   - l3d
