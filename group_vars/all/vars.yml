@@ -29,17 +29,18 @@ l3d_users__default_users:
     shell: '/bin/bash'
     create_home: true
     admin: true
+    admin_nopassword: true
+    admin_commands: 'ALL'
     pubkeys: |
        ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPvvXN33GwkTF4ZOwPgF21Un4R2z9hWUuQt1qIfzQyhC
        ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAG65EdcM+JLv0gnzT9LcqVU47Pkw0SqiIg7XipXENi8
        ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJz7zEvUVgJJJsIgfG3izsqYcM22IaKz4jGVUbNRL2PX
-  - name: 'alice'
-    state: 'absent'
-    remove: true
 
 # l3d.users.user
-l3d_users_user__create_ansible: true
-l3d_users_user__set_ansible_ssh_keys: true
+l3d_users__create_ansible: true
+l3d_users__ansible_user_state: 'present'
+l3d_users__set_ansible_ssh_keys: true
+l3d_users__ansible_ssh_keys: "{{ lookup('url', 'https://github.com/do1jlr.keys', split_lines=False) }}"
 
 # do1jlr.users
 admins:
