@@ -146,7 +146,7 @@
 	url = https://github.com/roles-ansible/ansible_role_homebox.git
 [submodule "collections/ansible_collections/l3d/users"]
 	path = collections/ansible_collections/l3d/users
-	url = https://github.com/ansible-actions/ansible_collection_users.git
+	url = https://github.com/roles-ansible/ansible_collection_users.git
 [submodule "roles/l3d.rustdesk"]
 	path = roles/l3d.rustdesk
 	url = https://github.com/roles-ansible/ansible_role_rustdesk.git
