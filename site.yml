@@ -12,7 +12,7 @@
     - {role: l3d.users.sshd, tags: [test, users, sshd]}
     - {role: l3d.packages, tags: [packages, general]}
     - {role: do1jlr.ranger, tags: [packages, ranger]}
-    - {role: gantsign.bat, tags: [packages, bat], when: [ansible_os_family == 'Debian']}
+    - {role: gantsign.bat, tags: [packages, bat], when: [ansible_os_family == 'Debian' and "ansible_architecture" == "x86_64"]}
     - {role: unattended_upgrades, tags: [default, unattended, unattended_upgrades, security], become: true, when: ansible_distribution == 'Debian'}
     - {role: do1jlr.rtl_nic_firmware, tags: [apu, rtl_nic, firmware]}
     - {role: do1jlr.avahi_client, tags: [avahi, avahi_client]}
@@ -22,8 +22,8 @@
 - name: User specific roles for all hosts
   hosts: all
   roles:
-    - {role: do1jlr.admin_base, tags: [default, init, users, accounts, dotfiles]}
-    - {role: do1jlr.dotfiles, tags: [default, dotfiles]}
+#    - {role: do1jlr.admin_base, tags: [default, init, users, accounts, dotfiles]}
+#    - {role: do1jlr.dotfiles, tags: [default, dotfiles]}
     - {role: geerlingguy.firewall, tags: [default, firewall], become: true}
     - {role: robertdebock.fail2ban, tags: [default, fail2ban], become: true}
 
@@ -54,6 +54,7 @@
     - {role: grafana.grafana.grafana, tags: [grafana. monitoring]}
     - {role: prometheus.prometheus.prometheus, tags: [monitoring, prometheus]}
     - {role: l3d.homebox, tags: [homebox]}
+    - {role: l3d.rustdesk, tags: [rustdesk]}
 
 - name: Deploy legacy mail config
   hosts: mail01.l3d.space

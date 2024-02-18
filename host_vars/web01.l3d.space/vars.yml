@@ -50,9 +50,7 @@ acme_reload_services:
 acme_restart_services:
   - 'gitea'
 
-acme_domain_unwant_list:
-  - name: 'backwesen.de'
-  - name: 'www.backwesen.de'
+acme_domain_unwant_list: []
 #  - name: 'example.com'
 
 nginx_sites:

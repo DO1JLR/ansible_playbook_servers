@@ -1,33 +1,19 @@
 ---
-users:
-  l3d:
-    - l3d@pinkie.l3d.yt
-    - l3d@mobile.l3d.yt
-    - l3d@backup.l3d.yt
-    - l3d@derpy.l3d.yt
-    - l3d@backup-rsa.l3d.yt
-    - l3d@business.wingcon.com
-  mxusr:
-    - l3d@pinkie.l3d.yt
-    - l3d@mobile.l3d.yt
-    - l3d@backup.l3d.yt
-    - l3d@derpy.l3d.yt
-    - l3d@backup-rsa.l3d.yt
-    - l3d@business.wingcon.com
-
-accounts:
-  - l3d
-  - mxusr
+l3d_users__local_users:
+  - name: 'mxusr'
+    state: 'present'
+    admin: false
+    pubkeys: "{{ lookup('url', 'https://github.com/do1jlr.keys', split_lines=False) }}"
 
 acme_domain_unwant_list: []
 #  - name: 'example.com'
 
 nginx_sites:
-  - name: 'mx.l3d.space'
+  - name: 'mx.l3d.ch'
     webroot:
       user: 'mxusr'
-  - name: 'node-exporter.mx.l3d.space'
-  - name: 'nginx-exporter.mx.l3d.space'
+  - name: 'node-exporter.mx.l3d.ch'
+  - name: 'nginx-exporter.mx.l3d.ch'
 
 # letsencrypt
 acme_notification_email: "{{ _acme_notification_email }}"

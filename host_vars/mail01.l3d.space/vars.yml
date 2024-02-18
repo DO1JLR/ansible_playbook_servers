@@ -1,31 +1,13 @@
 ---
-users:
-  l3d:
-    - l3d@pinkie.l3d.yt
-    - l3d@mobile.l3d.yt
-    - l3d@backup.l3d.yt
-    - l3d@derpy.l3d.yt
-    - l3d@backup-rsa.l3d.yt
-    - l3d@business.wingcon.com
-  weechat:
-    - l3d@pinkie.l3d.yt
-    - l3d@mobile.l3d.yt
-    - l3d@backup.l3d.yt
-    - l3d@derpy.l3d.yt
-    - l3d@backup-rsa.l3d.yt
-    - l3d@business.wingcon.com
-  mailwebuser:
-    - l3d@pinkie.l3d.yt
-    - l3d@mobile.l3d.yt
-    - l3d@backup.l3d.yt
-    - l3d@derpy.l3d.yt
-    - l3d@backup-rsa.l3d.yt
-    - l3d@business.wingcon.com
-
-accounts:
-  - l3d
-  - mailwebuser
-  - weechat
+l3d_users__local_users:
+  - name: 'weechat'
+    state: 'present'
+    admin: false
+    pubkeys: "{{ lookup('url', 'https://github.com/do1jlr.keys', split_lines=False) }}"
+  - name: 'mailwebuser'
+    state: 'present'
+    admin: false
+    pubkeys: "{{ lookup('url', 'https://github.com/do1jlr.keys', split_lines=False) }}"
 
 # mail domains
 additional_dns_maildomains: 'mail.l3d.space imap.l3d.space smtp.l3d.space'

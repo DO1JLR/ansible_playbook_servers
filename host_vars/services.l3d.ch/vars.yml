@@ -9,11 +9,11 @@ acme_domain_unwant_list: []
 #  - name: 'example.com'
 
 nginx_sites:
-  - name: 'mx.l3d.space'
+  - name: 'services.l3d.ch'
     webroot:
       user: 'mxusr'
-  - name: 'node-exporter.mx.l3d.space'
-  - name: 'nginx-exporter.mx.l3d.space'
+  - name: 'node-exporter.services.l3d.ch'
+  - name: 'nginx-exporter.services.l3d.ch'
 
 # letsencrypt
 acme_notification_email: "{{ _acme_notification_email }}"
@@ -35,8 +35,6 @@ firewall_allowed_tcp_ports:
 #  - "993"
 #  - "4190"
 #  - "42023"
-
-nginx__infrastructure_domain__enabled: false
 
 # l3d.time.ntp
 ntp_statistics: true
