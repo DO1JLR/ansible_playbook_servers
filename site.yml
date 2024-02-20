@@ -22,8 +22,8 @@
 - name: User specific roles for all hosts
   hosts: all
   roles:
-#    - {role: do1jlr.admin_base, tags: [default, init, users, accounts, dotfiles]}
-#    - {role: do1jlr.dotfiles, tags: [default, dotfiles]}
+    # - {role: do1jlr.admin_base, tags: [default, init, users, accounts, dotfiles]}
+    # - {role: do1jlr.dotfiles, tags: [default, dotfiles]}
     - {role: geerlingguy.firewall, tags: [default, firewall], become: true}
     - {role: robertdebock.fail2ban, tags: [default, fail2ban], become: true}
 
