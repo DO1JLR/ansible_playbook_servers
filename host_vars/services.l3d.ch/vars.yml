@@ -4,7 +4,6 @@ l3d_users__local_users:
     state: 'present'
     admin: false
     pubkeys: "{{ lookup('url', 'https://github.com/do1jlr.keys', split_lines=False) }}"
-l3d_users__local_users:
   - name: 'rustdesk-web'
     state: 'present'
     admin: false

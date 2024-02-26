@@ -8,11 +8,8 @@ rules:
     level: warning
 
 ignore: |
-  host_vars/mail01.l3d.space/vault.yml
-  host_vars/web01.l3d.space/vault.yml
-  host_vars/luna.l3d.ch/vault.yml
-  host_vars/services.l3d.space/vault.yml
-  group_vars/all/vault.yml
+  group_vars/*/vault.yml
   roles/
   ansible/
   collections/
+  host_vars/*/vault.yml

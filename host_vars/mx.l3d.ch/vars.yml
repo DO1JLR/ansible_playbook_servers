@@ -26,15 +26,8 @@ acme_reload_services:
 fail2ban_destemail: "{{ _fail2ban_destemail }}"
 firewall_allowed_tcp_ports:
   - "22"
-#  - "25"
   - "80"
-#  - "143"
   - "443"
-#  - "465"
-#  - "587"
-#  - "993"
-#  - "4190"
-#  - "42023"
 
 nginx__infrastructure_domain__enabled: false
 
