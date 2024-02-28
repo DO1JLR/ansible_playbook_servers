@@ -51,7 +51,7 @@
   hosts: services
   roles:
     - {role: l3d.etebase, tags: [etebase, etesync, calendar, kalender, contacts, kontakte]}
-    - {role: grafana.grafana.grafana, tags: [grafana. monitoring]}
+    - {role: grafana.grafana.grafana, tags: grafana}
     - {role: prometheus.prometheus.prometheus, tags: [monitoring, prometheus]}
     - {role: l3d.homebox, tags: [homebox]}
     - {role: l3d.rustdesk, tags: [rustdesk]}
