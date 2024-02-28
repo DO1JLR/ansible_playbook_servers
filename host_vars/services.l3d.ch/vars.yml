@@ -21,6 +21,8 @@ nginx_sites:
   - name: 'rustdesk.l3d.ch'
     webroot:
       user: 'rustdesk-web'
+  - name: 'grafana.winkekatze.tv'
+  - name: 'www.grafana.winkekatze.tv'
 
 # letsencrypt
 acme_notification_email: "{{ _acme_notification_email }}"
@@ -48,6 +50,25 @@ ntp_statistics: true
 # l3d.nginx_exporter
 nginx_exporter_listen_address: '127.0.0.1:9113'
 nginx_exporter_scrape_uri: 'https://node-exporter.mx.l3d.ch/nginx_status'
+
+# grafana.grafana-grafana
+grafana_address: '127.0.0.1'
+grafana_instance: 'grafana.l3d.ch'
+grafana_users:
+  allow_sign_up: false
+  auto_assign_org_role: Viewer
+  default_theme: dark
+
+grafana_dashboards:
+  - dashboard_id: '1860'
+    revision_id: '33'
+    datasource: '{{ grafana_datasources.0.name }}'
+  - dashboard_id: '12708'
+    revision_id: '1'
+    datasource: '{{ grafana_datasources.0.name }}'
+  - dashboard_id: '19688'
+    revision_id: '1'
+    datasource: '{{ grafana_datasources.0.name }}'
 
 # l3d.rustdesk
 rustdesk__relay_server_domain: 'rustdesk.l3d.ch'
