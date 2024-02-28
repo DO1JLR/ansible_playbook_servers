@@ -1,111 +1,47 @@
 ---
 postgres_users_no_log: false
-local_users:
-  webwaffel:
-    - l3d@pinkie.l3d.yt
-    - l3d@mobile.l3d.yt
-    - l3d@backup.l3d.yt
-    - l3d@derpy.l3d.yt
-    - l3d@backup-rsa.l3d.yt
-    - l3d@bsns.l3d
-  webwaffelpodcast:
-    - l3d@pinkie.l3d.yt
-    - l3d@mobile.l3d.yt
-    - l3d@backup.l3d.yt
-    - l3d@derpy.l3d.yt
-    - l3d@backup-rsa.l3d.yt
-    - l3d@bsns.l3d
-  files:
-    - l3d@pinkie.l3d.yt
-    - l3d@mobile.l3d.yt
-    - l3d@backup.l3d.yt
-    - l3d@derpy.l3d.yt
-    - l3d@backup-rsa.l3d.yt
-    - l3d@bsns.l3d
-  preview:
-    - l3d@pinkie.l3d.yt
-    - l3d@mobile.l3d.yt
-    - l3d@backup.l3d.yt
-    - l3d@derpy.l3d.yt
-    - l3d@backup-rsa.l3d.yt
-    - l3d@bsns.l3d
-  see:
-    - l3d@pinkie.l3d.yt
-    - l3d@mobile.l3d.yt
-    - l3d@backup.l3d.yt
-    - l3d@derpy.l3d.yt
-    - l3d@backup-rsa.l3d.yt
-    - l3d@bsns.l3d
-  winkekatze:
-    - l3d@pinkie.l3d.yt
-    - l3d@mobile.l3d.yt
-    - l3d@backup.l3d.yt
-    - l3d@derpy.l3d.yt
-    - l3d@backup-rsa.l3d.yt
-    - l3d@bsns.l3d
-  m2:
-    - l3d@pinkie.l3d.yt
-    - l3d@mobile.l3d.yt
-    - l3d@backup.l3d.yt
-    - l3d@derpy.l3d.yt
-    - l3d@backup-rsa.l3d.yt
-    - l3d@bsns.l3d
-  klima:
-    - l3d@pinkie.l3d.yt
-    - l3d@mobile.l3d.yt
-    - l3d@backup.l3d.yt
-    - l3d@derpy.l3d.yt
-    - l3d@backup-rsa.l3d.yt
-    - l3d@bsns.l3d
-  roles:
-    - l3d@pinkie.l3d.yt
-    - l3d@mobile.l3d.yt
-    - l3d@backup.l3d.yt
-    - l3d@derpy.l3d.yt
-    - l3d@backup-rsa.l3d.yt
-    - l3d@bsns.l3d
+l3d_users__local_users:
+  - name: 'webwaffel'
+    state: 'present'
+    admin: false
+    pubkeys: "{{ lookup('url', 'https://github.com/do1jlr.keys', split_lines=False) }}"
+  - name: 'webwaffelpodcast'
+    state: 'present'
+    admin: false
+    pubkeys: "{{ lookup('url', 'https://github.com/do1jlr.keys', split_lines=False) }}"
+  - name: 'files'
+    state: 'present'
+    admin: false
+    pubkeys: "{{ lookup('url', 'https://github.com/do1jlr.keys', split_lines=False) }}"
+  - name: 'preview'
+    state: 'present'
+    admin: false
+    pubkeys: "{{ lookup('url', 'https://github.com/do1jlr.keys', split_lines=False) }}"
+  - name: 'see'
+    state: 'present'
+    admin: false
+    pubkeys: "{{ lookup('url', 'https://github.com/do1jlr.keys', split_lines=False) }}"
+  - name: 'winkekatze'
+    state: 'present'
+    admin: false
+    pubkeys: "{{ lookup('url', 'https://github.com/do1jlr.keys', split_lines=False) }}"
+  - name: 'm2'
+    state: 'present'
+    admin: false
+    pubkeys: "{{ lookup('url', 'https://github.com/do1jlr.keys', split_lines=False) }}"
+  - name: 'klima'
+    state: 'present'
+    admin: false
+    pubkeys: "{{ lookup('url', 'https://github.com/do1jlr.keys', split_lines=False) }}"
+  - name: 'roles'
+    state: 'present'
+    admin: false
+    pubkeys: "{{ lookup('url', 'https://github.com/do1jlr.keys', split_lines=False) }}"
 
-sshd__allowed_users:
-  - "root"
-  - "ansible"
-  - "l3d"
-  - "webwaffel"
-  - "webwaffelpodcast"
-  - "gitea"
-  - "files"
-  - "preview"
-  - 'see'
-  - 'winkekatze'
-  - 'm2'
-  - 'klima'
-  - 'roles'
+l3d_users__ssh_login:
+  - name: 'gitea'
+    state: 'present'
 
-sshd__allowed_groups:
-  - "root"
-  - "ansible"
-  - "l3d"
-  - "webwaffel"
-  - "webwaffelpodcast"
-  - "gitea"
-  - "files"
-  - "preview"
-  - 'see'
-  - 'winkekatze'
-  - 'm2'
-  - 'klima'
-  - 'roles'
-
-local_accounts:
-  - 'l3d'
-  - 'webwaffel'
-  - 'webwaffelpodcast'
-  - 'files'
-  - 'preview'
-  - 'see'
-  - 'winkekatze'
-  - 'm2'
-  - 'klima'
-  - 'roles'
 
 # acmetool config
 acme_reload_services:
@@ -114,9 +50,7 @@ acme_reload_services:
 acme_restart_services:
   - 'gitea'
 
-acme_domain_unwant_list:
-  - name: 'backwesen.de'
-  - name: 'www.backwesen.de'
+acme_domain_unwant_list: []
 #  - name: 'example.com'
 
 nginx_sites:
@@ -149,6 +83,8 @@ nginx_sites:
   - name: 'l3d.yt'
   - name: 'www.l3d.yt'
   - name: 'l3d.ch'
+    webroot:
+      user: 'l3d'
   - name: 'www.l3d.ch'
   - name: 'l3d.me'
   - name: 'www.l3d.me'
@@ -206,6 +142,7 @@ firewall_allowed_tcp_ports:
   - "443"
 
 # gitea settings
+gitea_fork: 'forgejo'
 gitea_app_name: 'git.l3d.ch'
 gitea_http_domain: 'git.l3d.ch'
 gitea_root_url: 'https://git.l3d.ch'

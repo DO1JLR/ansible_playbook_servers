@@ -1,4 +1,10 @@
 ---
+l3d_users__local_users:
+  - name: 'mxusr'
+    state: 'present'
+    admin: false
+    pubkeys: "{{ lookup('url', 'https://github.com/do1jlr.keys', split_lines=False) }}"
+
 acme_domain_unwant_list: []
 #  - name: 'example.com'
 

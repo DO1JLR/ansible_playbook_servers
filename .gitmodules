@@ -99,7 +99,7 @@
 	url = https://github.com/roles-ansible/ansible_role_ntp.git
   branch = master
 [submodule "roles/do1jlr.etebase"]
-	path = roles/do1jlr.etebase
+	path = roles/l3d.etebase
 	url = https://github.com/roles-ansible/ansible_role_etebase.git
   branch = master
 [submodule "collections/ansible_collections/community/mysql"]
@@ -144,3 +144,9 @@
 [submodule "roles/l3d.homebox"]
 	path = roles/l3d.homebox
 	url = https://github.com/roles-ansible/ansible_role_homebox.git
+[submodule "collections/ansible_collections/l3d/users"]
+	path = collections/ansible_collections/l3d/users
+	url = https://github.com/roles-ansible/ansible_collection_users.git
+[submodule "roles/l3d.rustdesk"]
+	path = roles/l3d.rustdesk
+	url = https://github.com/roles-ansible/ansible_role_rustdesk.git
