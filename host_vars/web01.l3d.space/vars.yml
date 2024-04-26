@@ -121,6 +121,10 @@ nginx_sites:
     webroot:
       user: 'winkekatze'
   - name: 'www.aalen-geekend-23.winkekatze.tv'
+  - name: 'fsck-2024.winkekatze.tv'
+    webroot:
+      user: 'winkekatze'
+  - name: 'www.fsck-2024.winkekatze.tv'
   - name: 'winkekatze.tv'
     webroot:
       user: 'winkekatze'
