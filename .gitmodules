@@ -150,3 +150,6 @@
 [submodule "roles/l3d.rustdesk"]
 	path = roles/l3d.rustdesk
 	url = https://github.com/roles-ansible/ansible_role_rustdesk.git
+[submodule "collections/ansible_collections/l3d/linux"]
+	path = collections/ansible_collections/l3d/linux
+	url = https://github.com/roles-ansible/ansible_collection_linux.git
