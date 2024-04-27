@@ -4,8 +4,8 @@ submodules_versioncheck: true
 check_ansible_version: '2.15.2'
 
 # l3d.packages
-l3d_pkgs__install_advanced: true
-l3d_pkgs__install_cli: true
+packages__install_advanced: true
+packages__install_cli: true
 
 # do1jlr.ntp
 ntp_set_time_zone: true

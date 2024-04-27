@@ -11,7 +11,7 @@
     - {role: l3d.users.admin, tags: [users, admin]}
     - {role: l3d.users.sshd, tags: [users, sshd]}
     - {role: l3d.users.dotfiles, tags: [users, dotfiles]}
-    - {role: l3d.packages, tags: [packages, general]}
+    - {role: l3d.linux.packages, tags: [packages, general]}
     - {role: do1jlr.ranger, tags: [packages, ranger]}
     - {role: gantsign.bat, tags: [packages, bat], when: [ansible_os_family == 'Debian' and "ansible_architecture" == "x86_64"]}
     - {role: unattended_upgrades, tags: [default, unattended, unattended_upgrades, security], become: true, when: ansible_distribution == 'Debian'}
