@@ -52,6 +52,7 @@ nginx_exporter_listen_address: '127.0.0.1:9113'
 nginx_exporter_scrape_uri: 'https://node-exporter.mx.l3d.ch/nginx_status'
 
 # grafana.grafana-grafana
+grafana_alerting: {}
 grafana_address: '127.0.0.1'
 grafana_instance: 'grafana.l3d.ch'
 grafana_users:
@@ -61,7 +62,7 @@ grafana_users:
 
 grafana_dashboards:
   - dashboard_id: '1860'
-    revision_id: '33'
+    revision_id: '37'
     datasource: '{{ grafana_datasources.0.name }}'
   - dashboard_id: '12708'
     revision_id: '1'
