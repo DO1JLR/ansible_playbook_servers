@@ -1,0 +1,32 @@
+---
+# pretix
+pretix_version: 'v2024.8.0'
+pretix_bind_address: "127.0.0.1:8000"
+pretix_pretix_instance_name: 'patches.l3d.ch'
+pretix_pretix_url: 'https://pach.l3d.ch'
+pretix_pretix_trust_x_forwarded_for: 'yes'
+
+pretix_locale_default: 'de'
+pretix_locale_timezone: 'Europe/Berlin'
+
+pretix_database_backend: 'sqlite3'
+pretix_database_name: 'test'
+pretix_database_galera: false
+
+pretix_celery_broker: "redis://localhost:6379/0"
+pretix_celery_backend: "redis://localhost:6379/0"
+
+acme_domain_unwant_list:
+  - name: 'patch.l3d.space'
+
+nginx_sites:
+  - name: 'patch.l3d.ch'
+
+acme_notification_email: "{{ _acme_notification_email }}"
+
+# firewall
+fail2ban_destemail: "{{ _fail2ban_destemail }}"
+firewall_allowed_tcp_ports:
+  - "22"
+  - "80"
+  - "443"
