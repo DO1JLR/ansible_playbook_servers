@@ -153,3 +153,6 @@
 [submodule "collections/ansible_collections/l3d/linux"]
 	path = collections/ansible_collections/l3d/linux
 	url = https://github.com/roles-ansible/ansible_collection_linux.git
+[submodule "collections/ansible_collections/l3d/pretix"]
+	path = collections/ansible_collections/l3d/pretix
+	url = https://github.com/roles-ansible/ansible_collection_pretix.git

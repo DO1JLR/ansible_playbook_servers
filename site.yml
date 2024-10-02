@@ -68,7 +68,7 @@
   hosts: pretix.l3d.ch
   become: true
   roles:
-    - {role: em0lar.em0lar, tags: pretix, become: true}
+    - {role: l3d.pretix.pretix, tags: pretix}
 
 - name: Setup luna.l3d.ch host
   hosts: luna.l3d.ch
