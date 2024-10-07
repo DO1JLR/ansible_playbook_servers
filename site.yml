@@ -68,6 +68,8 @@
   hosts: pretix.l3d.ch
   become: true
   roles:
+    - {role: l3d.pretix.postgres, tags: pretix}
+    - {role: l3d.pretix.redis, tags: pretix}
     - {role: l3d.pretix.pretix, tags: pretix}
 
 - name: Setup luna.l3d.ch host
