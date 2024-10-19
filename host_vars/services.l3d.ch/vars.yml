@@ -23,6 +23,7 @@ nginx_sites:
       user: 'rustdesk-web'
   - name: 'grafana.winkekatze.tv'
   - name: 'www.grafana.winkekatze.tv'
+  - name: 'wireguard.l3d.ch'
 
 # letsencrypt
 acme_notification_email: "{{ _acme_notification_email }}"

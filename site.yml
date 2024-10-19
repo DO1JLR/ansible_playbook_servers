@@ -73,6 +73,11 @@
     - {role: l3d.pretix.nodejs, tags: pretix}
     - {role: l3d.pretix.pretix, tags: pretix}
 
+- name: Setup wireguard-ui
+  hosts: services.l3d.ch
+  roles:
+    - {role: l3d.wireguard.wireguardui, tags: wireguard}
+
 - name: Setup luna.l3d.ch host
   hosts: luna.l3d.ch
   roles: []
