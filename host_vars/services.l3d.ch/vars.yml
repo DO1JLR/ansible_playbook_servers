@@ -25,6 +25,10 @@ nginx_sites:
   - name: 'www.grafana.winkekatze.tv'
   - name: 'wireguard.l3d.ch'
 
+# wireguard-ui
+wireguardui__conf_endpoint_ip: 'wireguard.l3d.ch:51820'
+wireguardui__conf_int_address: '100.64.0.0/24'
+
 # letsencrypt
 acme_notification_email: "{{ _acme_notification_email }}"
 
