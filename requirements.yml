@@ -1,6 +1,10 @@
 ---
 collections:
   - name: 'community.general'
-    version: ">=9.4.0,<=10.0.0"
+    version: ">=9.5.0,<11.0.0"
   - name: 'community.crypto'
-    version: ">=2.22.0,<=3.0.0"
+    version: ">=2.22.0,<3.0.0"
+  - name: "community.postgresql"
+    version: ">=3.6.1,<4.0.0"
+  - name: "ansible.posix"
+    version: ">=1.5.4,<2.0.0"

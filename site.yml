@@ -34,7 +34,6 @@
     - {role: do1jlr.nginx, tags: [web, nginx]}
     - {role: l3d.nginx_exporter, tags: [monitoring, nginx, prometheus, exporter]}
 
-
 - name: Deploy web config
   hosts: web
   roles:
@@ -64,6 +63,20 @@
     - {role: postfix, tags: [mail, postfix]}
     - {role: do1jlr.rspamd, tags: [mail, rspamd]}
     - {role: do1jlr.weechat, tags: [irc, weechat]}
+
+- name: Setup Pretix
+  hosts: pretix.l3d.ch
+  become: true
+  roles:
+    - {role: l3d.pretix.postgres, tags: pretix}
+    - {role: l3d.pretix.redis, tags: pretix}
+    - {role: l3d.pretix.nodejs, tags: pretix}
+    - {role: l3d.pretix.pretix, tags: pretix}
+
+- name: Setup wireguard-ui
+  hosts: services.l3d.ch
+  roles:
+    - {role: l3d.wireguard.wireguardui, tags: wireguard}
 
 - name: Setup luna.l3d.ch host
   hosts: luna.l3d.ch

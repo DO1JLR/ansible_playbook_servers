@@ -23,6 +23,11 @@ nginx_sites:
       user: 'rustdesk-web'
   - name: 'grafana.winkekatze.tv'
   - name: 'www.grafana.winkekatze.tv'
+  - name: 'wireguard.l3d.ch'
+
+# wireguard-ui
+wireguardui__conf_endpoint_ip: 'wireguard.l3d.ch:51820'
+wireguardui__conf_int_address: '100.64.0.0/24'
 
 # letsencrypt
 acme_notification_email: "{{ _acme_notification_email }}"
@@ -43,6 +48,7 @@ firewall_allowed_tcp_ports:
 
 firewall_allowed_udp_ports:
   - "21116"
+  - "51820"
 
 # l3d.time.ntp
 ntp_statistics: true
