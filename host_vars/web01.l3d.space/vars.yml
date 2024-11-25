@@ -132,7 +132,7 @@ nginx_sites:
   - name: 'dhcp24.winkekatze.tv'
     webroot:
       user: 'winkekatze'
-  - name: 'www.shcp24.winkekatze.tv'
+  - name: 'www.dhcp24.winkekatze.tv'
   - name: 'klima-streik.de'
     webroot:
       user: 'klima'
