@@ -35,7 +35,7 @@
     - {role: l3d.nginx_exporter, tags: [monitoring, nginx, prometheus, exporter]}
 
 - name: Deploy web config
-  hosts: web
+  hosts: web01.l3d.space
   roles:
     # - {role: geerlingguy.mysql, tags: [web, git, mysql], become: true}
     - {role: l3d.git.gitea, tags: [web, gitea, git]}

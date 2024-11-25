@@ -2,13 +2,15 @@
 # pretix
 pretix__name: 'Patches'
 pretix__address: 'https://patch.l3d.ch'
+pretix__web_workers: '6'
 
 # nginx
-acme_domain_unwant_list:
-  - name: 'patch.l3d.space'
+acme_domain_unwant_list: []
 
 nginx_sites:
   - name: 'patch.l3d.ch'
+  - name: 'node-exporter.pretix.l3d.ch'
+  - name: 'nginx-exporter.pretix.l3d.ch'
 
 acme_notification_email: "{{ _acme_notification_email }}"
 
