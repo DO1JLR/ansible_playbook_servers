@@ -14,7 +14,7 @@
     - {role: l3d.linux.packages, tags: [packages, general]}
     - {role: do1jlr.ranger, tags: [packages, ranger]}
     - {role: gantsign.bat, tags: [packages, bat], when: [ansible_os_family == 'Debian' and "ansible_architecture" == "x86_64"]}
-    - {role: unattended_upgrades, tags: [default, unattended, unattended_upgrades, security], become: true, when: ansible_distribution == 'Debian'}
+    - {role: hifis.toolkit.unattended_upgrades, tags: [default, unattended, unattended_upgrades, security], become: true, when: ansible_distribution == 'Debian'}
     - {role: do1jlr.rtl_nic_firmware, tags: [apu, rtl_nic, firmware]}
     - {role: do1jlr.avahi_client, tags: [avahi, avahi_client]}
     - {role: l3d.time.ntp, tags: [ntp]}

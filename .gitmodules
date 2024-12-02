@@ -130,7 +130,7 @@
 	path = collections/ansible_collections/grafana/grafana
 	url = https://github.com/grafana/grafana-ansible-collection.git
 [submodule "roles/unattended_upgrades"]
-	path = roles/unattended_upgrades
+	path = collections/ansible_collections/hifis/toolkit
 	url = https://github.com/hifis-net/ansible-role-unattended-upgrades.git
 [submodule "collections/ansible_collections/community/general"]
 	path = collections/ansible_collections/community/general
