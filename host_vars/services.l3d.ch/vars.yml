@@ -27,7 +27,12 @@ nginx_sites:
 
 # wireguard-ui
 wireguardui__conf_endpoint_ip: 'wireguard.l3d.ch:51820'
-wireguardui__conf_int_address: '100.64.0.0/24'
+wireguardui__conf_int_address:
+  - '100.64.0.0/24'
+  - 'fd64::/64'
+wireguardui__conf_allowed_ips:
+  - '100.64.0.0/24'
+  - 'fd64::/64'
 
 # letsencrypt
 acme_notification_email: "{{ _acme_notification_email }}"
