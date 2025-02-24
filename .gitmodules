@@ -165,3 +165,6 @@
 [submodule "roles/l3d.cwtv_telegram_bot"]
 	path = roles/l3d.cwtv_telegram_bot
 	url = https://github.com/roles-ansible/ansible_role_cwtv_telegram_jitsi_bot.git
+[submodule "collections/ansible_collections/l3d/obs"]
+	path = collections/ansible_collections/l3d/obs
+	url = https://github.com/roles-ansible/ansible_collection_obs
