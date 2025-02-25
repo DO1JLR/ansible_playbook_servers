@@ -78,6 +78,7 @@
   hosts: services.l3d.ch
   roles:
     - {role: l3d.wireguard.wireguardui, tags: wireguard}
+    - {role: l3d.obs.lufs_exporter, tags: [lufs, obs, prometheus]}
     - {role: l3d.cwtv_telegram_bot, tags: cwtv}
 
 - name: Setup luna.l3d.ch host
