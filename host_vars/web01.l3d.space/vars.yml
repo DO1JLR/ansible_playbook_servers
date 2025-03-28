@@ -50,7 +50,10 @@ acme_reload_services:
 acme_restart_services:
   - 'gitea'
 
-acme_domain_unwant_list: []
+acme_domain_unwant_list:
+  - name: 'www.camp.waffel.li'
+  - name: '37c3.waffel.li'
+  - name: 'www.37c3.waffel.li'
 #  - name: 'example.com'
 
 nginx_sites:
@@ -63,9 +66,6 @@ nginx_sites:
   - name: 'c3woc.org'
   - name: 'waffel.li'
   - name: 'www.waffel.li'
-  - name: 'www.camp.waffel.li'
-  - name: '37c3.waffel.li'
-  - name: 'www.37c3.waffel.li'
   - name: 'www.c3woc.org'
   - name: 'c3woc.eu'
   - name: 'www.c3woc.eu'
