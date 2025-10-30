@@ -2,7 +2,7 @@
 # version check for all supported roles
 submodules_versioncheck: true
 packages__submodules_versioncheck: "{{ submodules_versioncheck }}"
-check_ansible_version: '2.15.2'
+check_ansible_version: '2.19.2'
 
 # l3d.packages
 packages__install_advanced: true
