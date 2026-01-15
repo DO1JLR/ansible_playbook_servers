@@ -48,12 +48,16 @@
     - {role: do1jlr.unbound, tags: [mail, unbound]}
 
 - name: Deploy services
-  hosts: services
+  hosts: services.l3d.space
   roles:
     - {role: l3d.etebase, tags: [etebase, etesync, calendar, kalender, contacts, kontakte]}
     # - {role: grafana.grafana.grafana, tags: grafana}
     - {role: prometheus.prometheus.prometheus, tags: [monitoring, prometheus], become: true}
-    - {role: l3d.homebox, tags: [homebox]}
+
+- name: Deploy services
+  hosts: services.l3d.ch
+  roles:
+    # - {role: l3d.homebox, tags: [homebox]}
     - {role: l3d.rustdesk, tags: [rustdesk]}
 
 - name: Deploy legacy mail config
