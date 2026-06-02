@@ -71,7 +71,7 @@
     - {role: do1jlr.weechat, tags: [irc, weechat]}
 
 - name: Setup Pretix
-  hosts: pretix.l3d.ch
+  hosts: infra.l3d.ch
   become: true
   roles:
     - {role: l3d.pretix.postgres, tags: pretix}
