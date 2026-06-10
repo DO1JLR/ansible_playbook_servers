@@ -1,0 +1,10 @@
+---
+acme_domain_want_list:
+  - name: 'camp.see-base.de'
+
+# acme mail
+acme_notification_email: "{{ _acme_notification_email }}"
+
+# acmetool config
+acme_reload_services:
+  - 'nginx'

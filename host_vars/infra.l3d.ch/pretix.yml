@@ -1,0 +1,5 @@
+---
+# pretix
+pretix__name: 'Camp'
+pretix__address: 'https://camp.see-base.de'
+pretix__web_workers: '6'
