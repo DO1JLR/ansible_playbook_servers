@@ -98,9 +98,6 @@
 	path = roles/l3d.etebase
 	url = https://github.com/roles-ansible/ansible_role_etebase.git
   branch = master
-[submodule "collections/ansible_collections/community/mysql"]
-	path = collections/ansible_collections/community/mysql
-	url = https://github.com/ansible-collections/community.mysql.git
 [submodule "collections/ansible_collections/community/crypto"]
 	path = collections/ansible_collections/community/crypto
 	url = https://github.com/ansible-collections/community.crypto.git
@@ -164,3 +161,9 @@
 [submodule "collections/ansible_collections/l3d/obs"]
 	path = collections/ansible_collections/l3d/obs
 	url = https://github.com/roles-ansible/ansible_collection_obs
+[submodule "collections/ansible_collections/ansible/mysql"]
+	path = collections/ansible_collections/ansible/mysql
+	url = https://github.com/ansible-collections/ansible.mysql
+[submodule "collections/ansible_collections/l3d/maddy"]
+	path = collections/ansible_collections/l3d/maddy
+	url = https://github.com/roles-ansible/ansible_collections_maddy.git
