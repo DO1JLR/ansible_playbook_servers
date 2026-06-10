@@ -67,11 +67,11 @@
     - {role: do1jlr.mailserver_preperation, tags: [mail, mailserver_preperation, prep, mailserver]}
     - {role: do1jlr.dovecot, tags: [mail, dovecot, mailserver_dovecot]}
     - {role: postfix, tags: [mail, postfix]}
-    - {role: do1jlr.rspamd, tags: [mail, rspamd]}
+    # - {role: do1jlr.rspamd, tags: [mail, rspamd]}
     - {role: do1jlr.weechat, tags: [irc, weechat]}
 
 - name: Setup Pretix
-  hosts: pretix.l3d.ch
+  hosts: infra.l3d.ch
   become: true
   roles:
     - {role: l3d.pretix.postgres, tags: pretix}

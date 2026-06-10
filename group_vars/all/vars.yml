@@ -11,9 +11,6 @@ packages__install_cli: true
 # do1jlr.ntp
 ntp_set_time_zone: true
 ntp_servers:
-  - ntp3.hetzner.de iburst
-  - ntp2.hetzner.de iburst
-  - ntp1.hetzner.de iburst
   - ptbtime1.ptb.de
   - ptbtime3.ptb.de
   - 1.pool.ntp.org iburst

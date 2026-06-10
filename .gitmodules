@@ -22,10 +22,6 @@
 	path = roles/do1jlr.sshd
 	url = https://github.com/roles-ansible/ansible_role_sshd.git
   branch = main
-[submodule "files/ssh_public_keys"]
-	path = files/ssh_public_keys
-	url = https://git.l3d.ch/ansible/ssh_public_keys.git
-  branch = main
 [submodule "roles/geerlingguy.firewall"]
 	path = roles/geerlingguy.firewall
 	url = https://github.com/geerlingguy/ansible-role-firewall.git
