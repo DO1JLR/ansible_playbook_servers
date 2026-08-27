@@ -50,10 +50,7 @@ acme_reload_services:
 acme_restart_services:
   - 'gitea'
 
-acme_domain_unwant_list:
-  - name: 'www.camp.waffel.li'
-  - name: '37c3.waffel.li'
-  - name: 'www.37c3.waffel.li'
+acme_domain_unwant_list: []
 #  - name: 'example.com'
 
 nginx_sites:
@@ -139,6 +136,10 @@ nginx_sites:
   - name: 'www.klima-streik.de'
   - name: 'node-exporter.web01.l3d.space'
   - name: 'nginx-exporter.web01.l3d.space'
+  - name: 'www.see-base.de'
+  - name: 'see-base.de'
+    webroot:
+      user: 'see'
 
 acme_notification_email: "{{ _acme_notification_email }}"
 
