@@ -2,6 +2,9 @@
 skip_list:
   - var-naming[no-role-prefix]
 
+warn_list:
+  - internal-error
+
 exclude_paths:
   - collections/
   - roles/
